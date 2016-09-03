@@ -1,0 +1,69 @@
+/*!
+ * Reckless Template (http://themeforest.net/users/imangm)
+ * Custom Color for Your Site Template
+ * Copyright 2015 ImanGM
+ */
+
+/* Accent Color */
+ 
+table thead, .logo-container, .logo-container:after, #main-menu > ul > li.sfHover > a, #main-menu > ul > li > a.active, #main-menu > ul > li > a:hover,
+#main-menu > ul > li.sfHover > a:after, #main-menu > ul > li > a.active:after, #main-menu > ul > li > a:hover:after, .main-heading:after, .icon-box .icon-place,
+.icon-box .icon-place:after, .icon-box-2 .icon-place, .icon-box-2 .icon-place:after, .blog-post .blog-info, .blog-post:after, .blog-post-2 .blog-info,
+.blog-post-2:after, .staff .staff-social, .staff .staff-social:after, .staff:after, .portfolio-filter span, .portfolio-filter span:after, .portfolio-item .portfolio-title,
+.portfolio-item .portfolio-title:after, .portfolio-item .zoom, .portfolio-item .zoom:after, .portfolio-item:after, .accordion-content:after, .tab-nav .tab-item.active a,
+.tab-nav .tab-item:hover a, .tab-nav .tab-item.active:after, .tab-item-content:before, .images-boxes:after, .image-box .image-box-zoom, .image-box .image-box-zoom:after,
+.owl-theme .owl-controls .owl-prev, .owl-theme .owl-controls .owl-prev:after, .count-icon, .progress-bars .progress-done, .promo-box, .promo-box:after, .btn-primary, 
+.pricing-table li:first-child, .pricing-table li:first-child:after, .tagcloud a:hover, .tagcloud a:hover:after, .blog-header .blog-date .blog-day, .blog-under > .blog-share > i, 
+.blog-under > .blog-share > i:after, .related-post-content, .related-post-content:before, .comment-box:after, .comment-box .comment-info, .comment-box .comment-info:after, 
+ul.page-numbers li a.active, ul.page-numbers li a:hover, ul.page-numbers li span, footer .up-footer:before, footer .go-top:after, footer .go-top, h4.underlined:after, h5.underlined:after, 
+.underline, .arrow-heading-right, .arrow-heading-left, .banner-content.banner-services .banner-text, .banner-content.banner-services-2 .banner-text, .banner-content.banner-team .banner-text, 
+.banner-content.banner-faq .banner-text, .banner-content.banner-career .banner-text, .banner-content.banner-contact .banner-text, .banner-content.banner-shortcodes .banner-text, 
+.tp-caption.reckless_big_accent_bg, .tp-caption.reckless_big_accent_bg:after, footer .footer-button, #main-menu .megamenu ul > li li a:hover, #main-menu .drop ul > li > a:hover,.owl-theme .owl-dot:hover, 
+.owl-theme .owl-dot.active
+{
+	background-color: #da5c5d;
+}
+
+.quoter-info span:before, .blog-post .blog-container h4 , .blog-post .blog-container .read-more, .blog-post-2 .blog-container h4, .blog-post-2 .blog-container .read-more, 
+.portfolio-navigation li a:hover, .accordion-title i, .iconned-list li i, .count-to-title, .tmq-btn:after, .blog-tags .tags a, .blog-share .blog-share-socials a:hover,
+.author-box .author-name, .author-box .author-name a, .author-box .author-social a , .widget ul > li a:hover, .banner-content.banner-about .banner-text, 
+.banner-content.banner-services-3 .banner-text, .tp-caption.reckless_icon i.fa
+{
+	color: #da5c5d;
+}
+
+blockquote, .count-icon:after
+{
+	border-left-color: #da5c5d;
+}
+
+.arrow-heading-left:after
+{
+	border-right-color: #da5c5d;
+}
+
+.portfolio-navigation li a:hover 
+{
+	border-color: #da5c5d;
+}
+
+.sidebar-searchbox input:focus, .sidebar-searchbox input:hover
+{
+	outline-color: #da5c5d;
+}
+
+/* Alternative Color */
+
+#container:after, .logo-container:before, #main-menu .drop ul:after, .breadcrumb-bar:after, .icon-box:hover .icon-place, .icon-box:hover .icon-place:after, 
+.icon-box-2:hover .icon-place, .icon-box-2:hover .icon-place:after, .icon-box-2:hover .underline, .staff .staff-social a:hover, .owl-theme .owl-controls .owl-next:after,
+.btn-primary:hover, .pricing-table.standard li:first-child:after, .blog-header .blog-date .blog-month, .blog-header .blog-date .blog-month:after, .blog-under > .blog-tags > i,
+.blog-under > .blog-tags > i:after, .bypostauthor .comment-box, footer .footer-label .underline, footer .footer-line, .owl-theme .owl-controls .owl-next, .comment-box .comment-info:hover, 
+.comment-box .comment-info:hover:after, .pricing-table.standard li:first-child
+{
+	background-color: #9f2544;
+}
+
+#main-menu .megamenu > ul > li li a:before, .author-box .author-social a:hover, .tp-caption.reckless_icon span, .tp-caption.reckless_light_alt_color
+{
+	color: #9f2544;
+}

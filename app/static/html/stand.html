@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Photomaker</title>
+		<meta charset="utf-8">
+		<!-- <link href="./styles/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+		<link rel="stylesheet" href="/../../static/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/../../static/styles/my-color.css">
+		<link rel="stylesheet" href="/../../static/styles/style.css">
+		<style>
+			#tune {
+				display: none;
+			}
+
+			#foto {
+				/*position: absolute;
+				 top: 140px;
+				 left: 1015px;
+				 width : 900px;
+				 max-width:920px;*/
+				/*margin : 0px auto;*/
+			}
+
+			#fotostar {
+				/*position: absolute;
+				 top: 570px;
+				 left: 1015px;
+				 width : 900px;
+				 max-width:900px;*/
+				/*margin : 0px auto;*/
+			}
+
+			#gifcontainer1 {
+				position: absolute;
+				width: 240px;
+				height: 320px;
+				/*top:  608px;
+				 left: 1048px;*/
+				top: 0px;
+				left: 0px;
+				display: none;
+			}
+			#gifcontainer2 {
+				position: absolute;
+				width: 240px;
+				height: 320px;
+				/*top:  608px;
+				 left: 1322px;*/
+				top: 0px;
+				left: 0px;
+				display: none;
+			}
+			#gifcontainer3 {
+				position: absolute;
+				width: 240px;
+				height: 320px;
+				/*top:  608px;
+				 left: 1596px;*/
+				top: 0px;
+				left: 0px;
+				display: none;
+			}
+
+			#fotosend {
+				position: absolute;
+				width: 240px;
+				height: 320px;
+				/*top:  608px;
+				 left: 1322px;*/
+				top: 0px;
+				left: 0px;
+				display: none;
+			}
+
+			#result {
+				/*position: absolute;
+				 top: 570px;
+				 left: 850px;
+				 width : 800px;
+				 max-width:820px;*/
+				/*margin : 0px auto;*/
+			}
+
+			#fotos {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 240px;
+				height: 320px;
+				max-width: 240px;
+				/*margin : 0px auto;*/
+			}
+
+			#save {
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				width: 700px;
+				max-width: 720px;
+				/*margin : 0px auto;*/
+			}
+
+			#fotomax {
+				position: absolute;
+				top: 22px;
+				left: 650px;
+				width: 500px;
+				max-width: 520px;
+				/*margin : 0px auto;*/
+			}
+
+			/*#content {
+			 margin-top : 10px;
+			 margin-left : 00px;
+			 margin-right : 10px;
+			 max-width: 1920px;
+			 }*/
+
+			#sketch {
+				display: none;
+			}
+
+			#filter {
+				display: none;
+			}
+
+			.nogum {
+				display: none;
+			}
+
+			.hide {
+				display: none;
+			}
+
+			.nohide {
+				display: block;
+			}
+
+			/* rewrite */
+			.logo-container:before {
+				background-color: #8F5887;
+			}
+
+			.logo-container {
+				padding: 12px 20px 6px;
+				background-color: rgb(236, 226, 235);
+			}
+
+			.logo-container:after {
+				background-color: #ECE2EB;
+			}
+
+			.navbar-header {
+				min-height: 100px;
+			}
+
+			.main-heading:after {
+				background-color: #8F5887;
+			}
+
+			body {
+				background-image: url("/../../static/img/background3.jpg");
+			}
+		</style>
+	</head>
+	<body onload="loadPage()">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="/../../static/js/clmtrackr/utils.js"></script>
+		<script src="/../../static/js/clmtrackr/numeric-1.2.6.min.js"></script>
+		<script src="/../../static/js/clmtrackr/mosse.js"></script>
+    <script src="/../../static/js/clmtrackr/objectdetect.js"></script>
+	  <script src="/../../static/js/clmtrackr/objectdetect.frontalface.js"></script>
+    <script src="/../../static/js/clmtrackr/jsfeat-min.js"></script>
+		<script src="/../../static/js/clmtrackr/frontalface.js"></script>
+		<script src="/../../static/js/clmtrackr/jsfeat_detect.js"></script>
+		<script src="/../../static/js/clmtrackr/left_eye_filter.js"></script>
+		<script src="/../../static/js/clmtrackr/right_eye_filter.js"></script>
+		<script src="/../../static/js/clmtrackr/nose_filter.js"></script>
+		<script src="/../../static/js/models/model_pca_20_svm.js"></script>
+		<script src="/../../static/js/clmtrackr/clm.js"></script>
+		<script src="/../../static/js/clmtrackr/svmfilter_webgl.js"></script>
+		<script src="/../../static/js/clmtrackr/svmfilter_fft.js"></script>
+		<script src="/../../static/js/clmtrackr/mossefilter.js"></script>
+		<script type="text/javascript"  src="/../../static/js/clmtrackr/track_stand.js"></script>
+		<script src="/../../static/js/models/model_pca_20_svm_emotionDetection.js"></script>
+		<script src="/../../static/js/clmtrackr/d3.min.js"></script>
+		<script src="/../../static/js/clmtrackr/emotion_classifier.js"></script>
+		<script src="/../../static/js/clmtrackr/emotionmodel.js"></script>
+
+		<div class="page-container">
+	    <div class="container">
+				<div class="page-bg">
+					<!-- PAGE CONTENT -->
+
+					<!-- Header Starts Here -->
+					<header class="clearfix">
+						<div class="navbar navbar-default navbar-white" role="navigation">
+
+							<div class="container-fluid">
+								<div class="navbar-header">
+									<!-- Responsive Menu Trigger -->
+
+									<!-- End Responsive Menu Trigger -->
+									<a class="navbar-brand" href="#">
+										<div class="sk-box">
+											<div class="logo-container">
+												<img class="logo" src="/../../static/img/logo-21-09-2015.png" alt="logo" onclick="setVideo()">
+											</div>
+										</div>
+									</a>
+								</div>
+<!-- 
+								Main Menu Starts
+								<nav id="main-menu" style="float:right;" class="navbar-collapse collapse sf-menu">
+									
+			 					</nav>
+								End Menu -->
+
+							</div>
+						</div>
+					</header>
+					<!-- End Header -->
+
+					<div class="row">
+
+						<div class="col-md-5">
+							<div class="container-fluid">
+
+
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="text-center">
+												<h4 class="main-heading"><div id="message">Ready-to-go</div></h4>
+											</div>
+										</div>
+									</div>
+							</div>
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<div id="video-container">
+											<video id="videoel" width="640" height="480" preload="auto" loop class="img-thumbnail"></video>
+											<canvas id="overlay" width="640" height="480"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a class="btn btn-default" href="http://192.168.1.67:5000/add/cam" role="button"><h4>Add faces to DB</h4></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="html5-progress-bar">
+											<div class="progress-bar-wrapper">
+												<progress id="pb" value="0" max="120"></progress>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<div id="help" class="hidden">
+											<a id="rate">Capture: 0.0000</a></br><a>Глаза:</a>
+											<a id="eye">0.00</a></br><a>Head angle:</a>
+											<a id="nase">0.0000</a></br><a>Timer:</a>
+											<a id="lpause">0</a></br><a>Query:</a>
+											<a id="lbusy">0</a></br><a>ID:</a>
+											<a id="fotoid"></a>
+											</br>
+											<a>Server response:</a>
+											<a id="answer"></a>
+											</br>
+										</div>
+										<div id="fotos">
+												<canvas id="fotosend" width="240" height="320"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<div id="tune">
+											Глаза:
+											<input id="ieye" type="text" value="5"></input>
+											</br>
+											Нос:
+											<input id="inose" type="text" value="4.5"></input>
+											</br>
+											Делитель для рамки детектора:
+											<input id="ifoto" type="text" value="1.5"></input>
+											</br>
+											Порог:
+											<input id="iscore" type="text" value="0.75"></input>
+											</br>
+											Наклон носа в радианах(0.17rad=10grad):
+											<input id="irad" type="text" value="0.17"></input>
+											</br>
+											Кадров без детекции перед сбросом:
+											<input id="ireset" type="text" value="20"></input>
+											</br>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="container-fluid">
+
+								<div class="row">
+									<div class="col-md-12">
+										<div class="text-center">
+											<h4 class="main-heading"><div id="you">This is you</div></h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-12">
+										<table class="table-condensed">
+											<tr>
+												<td>
+													<div class="portrait">
+														<div class="img-thumbnail">
+															<canvas id="foto1" width=240 height=320></canvas>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="portrait">
+														<div class="img-thumbnail">
+															<canvas id="foto2" width=240 height=320></canvas>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="portrait">
+														<div class="img-thumbnail">
+															<canvas id="foto3" width=240 height=320></canvas>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="hidden">
+												<td align="center"><p id="foto1r"></p></td>
+												<td align="center"><p id="foto2r"></a></td>
+												<td align="center"><p id="foto3r"></a></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-12">
+										<div class="text-center" style="padding-top: 20px;">
+											<h4 class="main-heading"><div id="als">You look like</div></h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-12">
+										<table class="table-condensed">
+											<tr>
+												<td>
+													<div class="portrait">
+														<div class="img-thumbnail">
+															<canvas id="foto4" width=240 height=320></canvas>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="portrait">
+														<div class="img-thumbnail">
+															<canvas id="foto5" width=240 height=320></canvas>
+														</div>
+													</div>
+												</td>
+												<td>
+													<div class="portrait">
+														<div class="img-thumbnail">
+															<canvas id="foto6" width=240 height=320></canvas>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td align="center"><h3><div id="foto4r"></div><strong><div id="foto4n"></div></strong></h4></td>
+												<td align="center"><h3><div id="foto5r"></div><strong><div id="foto5n"></div></strong></h4></td>
+												<td align="center"><h3><div id="foto6r"></div><strong><div id="foto6n"></div></strong></h4></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<footer>
+						<div class="footer-line">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 text-center">
+										<h5>© Copyright 2015 VisionLabs LLC | All Rights Reserved</h5>
+									</div>
+								</div>
+						</div>
+					</div>
+					</footer>
+
+					<!-- <div id="gifcontainer1">
+						<img src="1.gif" width="240" height="320" />
+					</div>
+					<div id="gifcontainer2">
+						<img src="2.gif" width="240" height="320" />
+					</div>
+					<div id="gifcontainer3">
+						<img src="3.gif" width="240" height="320" />
+					</div> -->
+
+				</div>
+			</div>
+		</div>
+
+<script>
+	function loadPage() {
+		startVideo();
+	}
+
+	var vid = document.getElementById('videoel');
+	//var video = document.getElementById('videoel');
+
+	document.getElementById("foto1").style.marginLeft = "30px";
+	document.getElementById("foto2").style.marginLeft = "30px";
+	document.getElementById("foto3").style.marginLeft = "30px";
+	document.getElementById("foto4").style.marginLeft = "30px";
+	document.getElementById("foto5").style.marginLeft = "30px";
+	document.getElementById("foto6").style.marginLeft = "30px";
+	document.getElementById("foto1r").style.marginLeft = "30px";
+	document.getElementById("foto2r").style.marginLeft = "30px";
+	document.getElementById("foto3r").style.marginLeft = "30px";
+	document.getElementById("foto4r").style.marginLeft = "30px";
+	document.getElementById("foto5r").style.marginLeft = "30px";
+	document.getElementById("foto6r").style.marginLeft = "30px";
+	document.getElementById("foto4n").style.marginLeft = "30px";
+	document.getElementById("foto5n").style.marginLeft = "30px";
+	document.getElementById("foto6n").style.marginLeft = "30px";
+	document.getElementById("you").style.marginLeft = "30px";
+	document.getElementById("als").style.marginLeft = "30px";
+
+	var ctrack = new clm.tracker({
+		useWebGL : true
+	});
+	ctrack.searching = 1;
+	ctrack.init(pModel);
+	clearFoto(0);
+	clearFoto(3);
+
+	//stats = new Stats();
+	//stats.domElement.style.position = 'absolute';
+	//stats.domElement.style.top = '0px';
+	//document.getElementById('container').appendChild( stats.domElement );
+
+	var ec = new emotionClassifier();
+	ec.init(emotionModel);
+	var emotionData = ec.getBlank();
+	/*
+	var clock = $('.user-clock').FlipClock({
+	defaultClockFace: 'MinuteCounter',
+	autoStart : 'false'
+	});
+	//clock.defaultClockFace= 'MinuteCounter';
+	//clock.autoStart = false;
+	clock.setTime(60);
+	clock.setCountdown(true);
+	*/
+	//clock.start();
+
+	//	function enablestart() {
+	//		var startbutton = document.getElementById('startbutton');
+	//		startbutton.value = "Старт";
+	//		startbutton.disabled = null;
+	//	}
+
+	var insertAltVideo = function() {
+		if (document.getElementById('error')) {
+			//Записываем ссылку на элемент в переменную obj
+			var obj = document.getElementById('error');
+			obj.style.display = "block";
+			//Показываем элемент
+		}
+	}
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+	window.URL = window.URL || window.webkitURL || window.msURL || window.mozURL;
+
+	// check for camerasupport
+	if (navigator.getUserMedia) {
+		// set up stream
+
+		var videoSelector = {
+			video : true
+		};
+		if (window.navigator.appVersion.match(/Chrome\/(.*?) /)) {
+			var chromeVersion = parseInt(window.navigator.appVersion.match(/Chrome\/(\d+)\./)[1], 10);
+			if (chromeVersion < 20) {//>
+				videoSelector = "video";
+			}
+		};
+
+		navigator.getUserMedia(videoSelector, function(stream) {
+			if (vid.mozCaptureStream) {
+				vid.mozSrcObject = stream;
+			} else {
+				vid.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+			}
+			vid.play();
+		}, function() {
+			insertAltVideo();
+			document.getElementById('gum').className = "hide";
+			document.getElementById('nogum').className = "nohide";
+			alert("There was some problem trying to fetch video from your webcam, using a fallback video instead.");
+		});
+	} else {
+		insertAltVideo();
+		document.getElementById('gum').className = "hide";
+		document.getElementById('nogum').className = "nohide";
+		alert("Your browser does not seem to support getUserMedia, using a fallback video instead.");
+	}
+
+	// vid.addEventListener('canplay', enablestart, false);
+
+	function startVideo() {
+		// start video
+		vid.play();
+		// start tracking
+		ctrack.start(vid);
+		// start loop to draw face
+		drawLoop();
+	}
+
+	function setVideo() {
+		if (document.getElementById('tune')) {
+			//Записываем ссылку на элемент в переменную obj
+			var obj = document.getElementById('tune');
+			//Если css-свойство display не block, то:
+			if (obj.style.display != "block") {
+				obj.style.display = "block";
+				//Показываем элемент
+				//document.getElementById('container').style.top= '300px';
+			} else {
+				obj.style.display = "none";
+				//Скрываем элемент
+				//document.getElementById('container').style.top= '110px';
+			}
+		}
+	}
+
+	// update stats on every iteration
+	//document.addEventListener('clmtrackrIteration', function(event) {
+	//	stats.update();
+	//}, false);
+
+</script>
+</body>
+</html>
