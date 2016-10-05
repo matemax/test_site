@@ -17,7 +17,7 @@ from config import LUNA_URL
 @app.route('/view/<lessons>')
 def testpdfviewer(lessons):
     lessonspdf = lessons + '.pdf'
-    return render_template("test.html", pdfName = lessonspdf)
+    return render_template("view_lessons.html", pdfName = lessonspdf)
 
 
 
