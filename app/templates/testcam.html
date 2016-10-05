@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Display Webcam Stream</title>
+  
+<style>
+#container {
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
+}
+</style>
+</head>
+  
+<body>
+<div id="container">
+    <video autoplay="true" id="videoElement">
+     
+    </video>
+    <div id="test"></div>
+</div>
+<script>
+ var video = document.querySelector("#videoElement");
+ var div = document.getElementById("test");
+
+	var buffer = document.createElement("canvas");
+    var bufferCC = buffer.getContext('2d');
+	buffer.width = 640;
+    buffer.height = 480;
+	div.appendChild(buffer)
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {       
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+	pocess();
+}
+ 
+function videoError(e) {
+    // do something
+}
+
+function pocess()
+{
+	var videoWeb = document.getElementById("videoElement");
+
+	requestAnimationFrame(pocess);
+	bufferCC.drawImage(videoWeb, 0, 0, 640, 480);
+    //var t = bufferCC.getImageData(0, 0, 640, 480);
+}
+</script>
+</body>
+</html>

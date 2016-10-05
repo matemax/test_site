@@ -14,9 +14,15 @@ from flask import stream_with_context, make_response, render_template
 
 from config import LUNA_URL
 
+@app.route('/view/<lessons>')
+def testpdfviewer(lessons):
+    lessonspdf = lessons + '.pdf'
+    return render_template("test.html", pdfName = lessonspdf)
 
-@app.route('/stand')
-def stand():
-    return render_template("base.html")
 
+
+
+@app.route('/web')
+def web():
+    return render_template("testcam.html")
 
