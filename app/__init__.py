@@ -7,6 +7,4 @@ app.config.from_object('config')
 
 CORS(app)
 
-#db = SQLAlchemy(app)
-
 from app import views
