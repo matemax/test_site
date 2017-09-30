@@ -1,0 +1,86 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Правило Штурма 
+}{4 марта 2017 9-11 класс}
+
+
+\begin{definition}
+Точка $x_0\in \mathbb{R}$ называется точкой подьёма функции $f$, если 
+$\exists \epsilon > 0$, что при $x-\epsilon < t < x$  $f(x_0)>f(t)$ и 
+при $x+ \epsilon > t > x$  $f(x_0)<f(t)$.
+
+
+Точка $x_0\in \mathbb{R}$ называется точкой спуска функции $f$, если 
+$\exists \epsilon > 0$, что при $x-\epsilon < t < x$  $f(x_0)<f(t)$ и 
+при $x+ \epsilon > t > x$  $f(x_0)>f(t)$. 
+\end{definition}
+
+\begin{definition}
+Алгебраическим числом прообразов значения $y$ функции $f$ называеся  число $a(f,y)=p-s$, где $p$ и $s$~--- количество точек подъёма и спуска среди прообразов $y$.
+\end{definition}
+
+\begin{exercise}
+Докажите, что для многочлена   $a(f,y)$ не зависит от $y$
+\end{exercise}
+
+\begin{task}
+Для многочлена  $P$  количество  решений  уравнения уравнения  $P(x)=0$ равно $-a\left(\dfrac{P'}{P}, y\right)$ для достаточно большого $y$.\\
+\end{task}
+
+Пусть $P=p_nx^n+\ldots+p_0$ и $Q=q_mx^m+\ldots+q_0$~--- многочлены, не имеющие общих непостоянных множителей, $p_nq_m\ne 0$, $f=P/Q$.
+
+\begin{task}
+Если $m < n$, то пусть $y\ne 0$, если $m=n$, пусть $p_n\ne yq_m$. Тогда  $a(f,y)$ не зависит от выбора $y$. Поэтому это число будет обозначаться $a(f)$.
+\end{task}
+
+\begin{task}[Правило Штурма в формулировке Хованского]\sub Докажите, что если $P$ и  $Q$ многочлены, то $a\left(\dfrac{P}{Q}\right) = - a\left(\dfrac{Q}{P}\right)$.\\
+\sub Tсли $P, G$ и  $Q$ многочлены и $\deg P< \deg Q$, то $a\left(G + \dfrac{P}{Q}\right) =a(G) - a\left(\dfrac{Q}{P}\right)$.\\
+\sub  Предложите алгоритм нахождения количества корней многочлена.
+\end{task}
+
+
+\begin{task}[Теорема Фурье-Бюдан] Пусть $N(t)$~--- число перемен знака в последовательности $f(t),f'(t),\ldots, f^{(n)}(t)$, где $f$ многочлен степени $f$. Тогда число корней  многочлена $f$ (с учётом кратности) заключённых между между $a$ и $b$, где $f(a)\ne 0$, $f(b)\ne 0$ и $a< b$ не превосходит числа $N(a)-N(b)$, причём отличается от него на чётное число.
+\end{task}
+
+
+\begin{task}[Правило Декарта] Количество положительных корней многочлена $f(x)=a_nx^n+\ldots+a_0$  не превосходит числа перемен знака в последовательности $a_0,\ldots,a_n$.
+
+\begin{definition}
+Пусть $f$~--- многочлен и $f_1=f'$. В результате работы алгоритма Евклида для $(f,f_1)$ получается последовательность остатков $f_1,\ldots,f_n$. Последовательность $f,f',-f_1,\ldots,-f_n$ называется \emph{последовательностью Штурма}.
+\end{definition}
+
+
+\begin{task}[Теорема Штурма]
+Пусть $\omega(t)$ число перемен знака в последовательности Штурма. Тогда количество корней без учёта кратности на отрезке $[a,b]$, где $f(a)\ne 0$, $f(b)\ne 0$ и $a< b$ в точности равно $\omega(a)-\omega(b)$.
+\end{task}
+
+
+\end{task}
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

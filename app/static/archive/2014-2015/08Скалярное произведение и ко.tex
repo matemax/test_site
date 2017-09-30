@@ -1,0 +1,98 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+%\DeclareMathOperator{\Pr}{ord}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Скалярное произведение и ко
+}{22 ноября 2014 9-11 класс}
+
+\begin{definition}
+Пусть даны три вектора $\overrightarrow{e}$, $\overrightarrow{e'}$ и $\overrightarrow{b}$, такие что $\overrightarrow{e}\bot \overrightarrow{e'}$ и оба имеют единичную длину.  Тогда $\overrightarrow{b} = x\overrightarrow{e}+y\overrightarrow{e'}$. Число $x$ называется проекцией вектора  $\overrightarrow{b}$ на направение $\overrightarrow{e}$. Обозначение $x=\Pr_{\overrightarrow{e}}(\overrightarrow{b})$.
+\end{definition}
+
+
+\begin{exercise}
+\sub Когда выполнены следующие равенства $\Pr_{\overrightarrow{e}}(\overrightarrow{b})=0$, $\Pr_{\overrightarrow{e}}(\overrightarrow{b})=|\overrightarrow{b}|$?
+
+\sub Докажите, что для любых векторов $\overrightarrow{e}\ne \overrightarrow{0},\overrightarrow{b_1},\overrightarrow{b_2}$ верно равенство $\Pr_{\overrightarrow{e}}(\overrightarrow{b_1}+\overrightarrow{b_2})=\Pr_{\overrightarrow{e}}(\overrightarrow{b_1})+\Pr_{\overrightarrow{e}}(\overrightarrow{b_2}).$
+
+\sub Докажите равенство для $\overrightarrow{e}\ne \overrightarrow{0},\overrightarrow{b}\ne \overrightarrow{0}$ $\Pr_{\overrightarrow{e}}(\overrightarrow{b})=|\overrightarrow{b}|\cdot \cos(\angle (\overrightarrow{e},\overrightarrow{b}))$.
+\end{exercise}
+
+\begin{definition}
+Скалярным произведением векторов $\overrightarrow{a}$ и $\overrightarrow{b}$ называется число $(\overrightarrow{b},\overrightarrow{b})= |\overrightarrow{a}|\cdot \Pr_{\overrightarrow{a}}\overrightarrow{b}$.
+\end{definition}
+
+\begin{exercise}
+\sub Когда выполнено $(\overrightarrow{a}, \overrightarrow{b})=0$?
+
+\sub Чему равно $(\overrightarrow{a}, \overrightarrow{a})$?
+
+\sub Докажите равенство $(\overrightarrow{a},\overrightarrow{b}+\overrightarrow{c})=(\overrightarrow{a},\overrightarrow{b})+(\overrightarrow{a},\overrightarrow{c})$.
+
+\sub Пусть дана координатная плоскость с базисными единичными векторами $\overrightarrow{e_1}$ и $\overrightarrow{e_2}$. Вектора $\overrightarrow{a}$, $\overrightarrow{b}$ имеют координаты в этом базисе $(x_1,y_1)$ и $(x_2,y_2)$. Найдите $(\overrightarrow{a}, \overrightarrow{b})$.
+\end{exercise}
+
+
+\begin{task}
+Квадрат со стороной 1 разрезали на прямоугольники, у каждого из которых отметили одну сторону. Докажите,
+что сумма длин всех отмеченных сторон не может быть меньше 1.
+\end{task}
+
+
+\begin{task}
+Докажите неравенство $(x_1x_2+y_1y_2)^2\leqslant (x_1^2+y_1^2)(x_2^2+y^2)$.
+\end{task}
+
+\begin{task}
+ Выпуклый $2n$-угольник $A_1A_2\ldots A_{2n}$ вписан в окружность радиуса 1. Докажите, что
+$$|\overrightarrow{A_1A_2}+\overrightarrow{A_3A_4}+\ldots+\overrightarrow{A_{2n-1}A_{2n}}|\leqslant 2 $$
+\end{task}
+
+\begin{task}
+Правильный $n$-угодьник $A_1A_2\ldots A_n$ вписан в окружность радиуса $R$ и $X$~--- произвольная точка. Докажите 
+$$
+A_1X^2+\ldots+A_nX^2=n(R^2+d^2).
+$$	
+\end{task}
+
+\begin{task}
+На окружности радиуса $1$ с центром $O$ дано $2n+1$ точек $P_1,\dots,
+P_{2n+1}$, лежащих по одну сторону от некоторого диаметра. Докажите, что
+$$\left|\overline{OP_1}+\dots+\overline{OP_{2n+1}}\right|\ge 1.$$
+\end{task}
+\begin{task}
+ Пусть $O$~-- центр описанной окружности, $H$~--- ортоцентр и
+$M$~--- точка пересечения медиан треугольника $ABC$.
+\quad
+а)~Докажите, что $\overline{OH}=\overline{OA}+\overline{OB}+\overline{OC}$.
+\quad
+б)~Выведите из этого, что точки $M$, $H$, $O$ лежат на одной прямой ({\it прямая Эйлера}), причем $MH=2OM$. 
+\quad
+в)~Докажите, что $OH^2=9R^2-(a^2+b^2+c^2)$.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

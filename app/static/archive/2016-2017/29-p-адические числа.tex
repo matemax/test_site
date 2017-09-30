@@ -1,0 +1,83 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{$P(10)$~--- адические числа
+}{ 22 апреля 2017 9-11 класс}
+
+  \begin{task} Для любого $k$ существует ровно 4 $k$-значных последовательности цифр, таких, что квадрат любого числа, заканчивающегося такой последовательностью, тоже заканчивается такой последовательностью.
+\end{task}
+
+\begin{remark}
+Заметим, что из двух нетривиальных последовательностей одна заканчивается на 5 (обозначим её $x_k$), а другая на 6 ($y_k$).
+\end{remark}
+
+\begin{task}
+Покажите, что $x_k$~--- последовательность, состоящая из последних $k$ цифр числа $x_{k-1}^2$. 
+\end{task}
+
+
+\begin{task}
+Покажите, что $y_k$~--- последовательность, состоящая из последних $k$ цифр числа $y_{k-1}^5$. 
+\end{task}
+
+
+
+\begin{remark}
+Получается, что  $x_k$ и $y_k$  получаются из   $x_{k-1}$ и $y_{k-1}$   приписыванием слева одной цифры. Если не остановить этот процесс приписывания цифр, мы получим , кроме двух тривиальных бесконечных последовательностей 000\ldots000 и 000\ldots001 ещё две нетривиальные: \ldots8212890625  и \ldots1787109376. Обозначим их X и Y соответственно.
+\end{remark}
+\begin{definition}
+Бесконечные влево последовательности десятичных цифр назовём 10-адическими числами. 
+\end{definition}
+\begin{definition}
+Бесконечные влево последовательности остатков при делении на $p$ назовём $p$-адическими числами. 
+\end{definition}
+
+\begin{task}
+Найдите:\\
+\sub \ldots325325325+\ldots73737373\\
+\sub \ldots325325325+\ldots89898989\\
+\sub $\ldots33333333^2$ (5 последних цифр и принцип нахождения).\\
+\sub -1 (10-адическое число, дающее 0=\ldots000 при сложении с числом 1). 
+
+\end{task}
+\begin{task}
+\sub Покажите, что $XY=0$.\\
+\sub Докажите, что $X+Y=1$.\\
+\sub Для простого $p$ найдите критерий существования  обратного элемента к элементу $x$ ($xy=1$). 
+\end{task}
+\begin{task}
+Покажите, что $X-Y$ является решением уравнения $x^3=x$ .
+\end{task}
+\begin{task}
+\sub При $m=2k$ уравнение  $x^m=x$ имеет ровно четыре решения;\\
+\sub При $m=4k-1$ уравнение $x^m=x$  имеет ровно девять решений;\\
+\sub При $m=4k+1$ уравнение $x^m=x$  имеет ровно пятнадцать решений в 10-адических числах.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

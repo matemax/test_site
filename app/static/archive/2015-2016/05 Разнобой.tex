@@ -1,0 +1,86 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Теоретический разнобой 4
+}{17 октября 2015 9-11 класс}
+
+\begin{task}
+Последовательность $x_ny_n$ стремится к нулю. Верно ли, что либо $x_n$, либо $y_n$ стремится к нулю?
+\end{task}
+
+\begin{task}
+Найдите предел последовательностей: \sub$ 1/(1\cdot 2)+1/(2\cdot 3)+...+1/((n-1)\cdot n)$;\\
+ \sub $\cfrac{P(n)}{G(n)}, P(x),G(x)\in\mathbb{R}[x]$;\\
+  \sub $\cfrac{P(n)}{a^n}, P(x)\in\mathbb{R}[x], a > 1$.
+\end{task}
+
+\begin{task}
+Докажите, что сходящаяся последовательность достигает либо своей верхней, либо своей нижней грани
+\end{task}
+
+
+\begin{task}Докажите, что  $f\in \mathbb{C}[x]$. Докажите, что $f(x)$ имеет кратный корень тогда и только тогда, ктогда $(f,f')\ne 1$.
+\end{task}
+
+\begin{task}Какое преобразоваение комплексной плоскости задано отображением $\forall z\ne 0$ $z\to \frac{1}{\overline{z}}, 0 \to \infty, \infty \to 0$.
+\end{task}
+
+\begin{definition}
+Множество $X$ называется \emph{плотным} в множестве $Y$, если всякая окрестность любой точки из $Y$ содержит точку из $X$.
+\end{definition}
+
+В листочке про кузнечиков мы доказали следующее утверждение 
+
+\begin{theorem}[Одномерная теорема Кронекера] Если $\alpha>0$~--- иррациональное число, то множество $\{ n\alpha \}$, $n \in \mathbb{N}$ плотно на отрезке $[0,1]$.
+
+\end{theorem} 
+
+Рассмотрим двумерный аналог: множество точек $(\{n\alpha\},\{n\beta\})$, $n \in \mathbb{N}$ в квадрате $[0,1]\times [0,1]$. Мы хотим доказать плотность этого множества.
+
+
+\begin{task}
+ Докажите, что при иррациональном отношении $\alpha/\beta$ множество точек $(\{t\alpha\},\{t\beta\})$, $t\in \mathbb{R}$ плотно в квадрате $[0,1]\times [0,1]$. 
+ 
+\end{task}
+ 
+ \begin{task}
+Пусть $1,\alpha,\beta$ линейно независимы над $\mathbb{Q}$. Докажите, что для любого $n$ число $\{n\alpha\}/\{n\beta\}$~--- иррационально. 
+ \end{task}
+ \begin{definition}
+ Набор вещественных чисел $x_1,\dots, x_s$ \emph{линейно независимым} над $\mathbb{Q}$, если равенство $\sum_{i=1}^s\alpha_ix_i=0$, $\alpha_i \in \mathbb{Q}$ влечет равенство нулю всех $\alpha_i$.  (Например, независимость $1$ и $\alpha$ означает иррациональность~$\alpha$
+ \end{definition}
+ 
+\begin{theorem}[Двумерная теорема Кронекера] Пусть $1,\alpha,\beta$ линейно независимы над $\mathbb{Q}$. Докажите, что множество точек $(\{n\alpha\},\{n\beta\})$ плотно в квадрате $[0,1]\times [0,1]$
+
+\end{theorem}
+Идея доказательства. Из задачи про кузнечиков следует, что существует для любого $\varepsilon>0$  существует $k \in \mathbb{N}$ такое, что $(\alpha',\beta')=(\{k\alpha\},\{k\beta\})$ отличается от $(0,0)$ меньше чем на $\varepsilon$. Идея состоит в том, что взять этот маленький вектор $(\alpha',\beta')$ и при помощи него попасть с малую окрестность произвольной точки $x_0,y_0$.
+ \begin{task}
+Приведите пример чисел $\alpha$, $\beta$ таких, что числа $1,\alpha,\beta$ линейно независимы над $\mathbb{Q}$.
+ \end{task}
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

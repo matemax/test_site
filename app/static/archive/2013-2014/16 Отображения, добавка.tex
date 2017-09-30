@@ -1,0 +1,100 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+\usepackage{graphicx,epstopdf}
+\usepackage{tikz}
+
+%\usepackage{xfrac}
+\newtheorem{theorem}{“еорема}
+\pagestyle{empty}
+%\topmargin=-2cm \textheight=25cm
+\evensidemargin=-0,6cm \oddsidemargin=-0,6cm
+\textwidth=18cm
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+
+
+\begin{document}
+\sheet{ћалый механико-математический факультет, 14-15.}{ќтобржени€, добавка
+}{10-е марта 2014 8 класс}
+
+\begin{task}
+„исло разбиений числа $n$ на неболее чем $k$ натуральных слагаемых равно числу разбиений $n$ на слагаемые, каждое из которых не больше $k$.
+\end{task}
+
+\begin{task}
+ аких графов на $n$ вершинах больше: св€зных или несв€зных?
+\end{task}
+
+\begin{task}
+–ассмотрим последовательности чисел длины $n$ такие, что в них каждое число от 1 до $n$ встречаетс€ ровно по одному разу и  каждый следующий член, кроме первого, делит сумму всех предыдущих. ќбозначим за $A_n$ число таких последовательностей. ƒокажите, что $A_{2n}\leqslant A_{2n+1}$.
+\end{task}
+\begin{task}
+ƒокажите, что ответ в следующих задачах одинаковый:\\
+\sub „ерез $C_n$ ($n$-ое число  аталана) обозначим количество способов расставить $n$
+открывающих и $n$ закрывающих скобок так, чтобы запись была корректной. „е-
+му равно $C_n$?\\
+\sub ¬ очереди в кассу кинотеатра сто€т $2n$ зрителей, у половины из них полтин-
+ники, у половины стольники. Ѕилет стоит полтинник. »значально касса пуста и
+сдачу давать не может. —колько имеетс€ очередей, которые смогут целиком прой-
+ти через эту кассу?\\
+\sub Ќайдите количество способов соединить $2n$ точек на горизонтальной пр€мой дугами, так что никака€ дуга не лежит внутри другой (кажда€ дуга лежит в верхней полуплоскости)?
+
+
+
+
+\end{task}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\filldraw (0,0) circle (2pt) (1,0) circle (2pt) (2,0) circle (2pt) (3,0) circle (2pt) (4,0) circle (2pt) (5,0) circle (2pt);
+\draw (-0.3,0) --  (5.3,0);
+\draw (1,0)  arc[radius=0.5,start angle=0, end angle=180];
+\draw (3,0)  arc[radius=0.5,start angle=0, end angle=180];
+\draw (5,0)  arc[radius=0.5,start angle=0, end angle=180];
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.5]
+\filldraw (0,0) circle (2pt) (1,0) circle (2pt) (2,0) circle (2pt) (3,0) circle (2pt) (4,0) circle (2pt) (5,0) circle (2pt);
+\draw (-0.3,0) --  (5.3,0);
+\draw (1,0)  arc[radius=0.5,start angle=0, end angle=180];
+\draw (4,0)  arc[radius=1,start angle=0, end angle=180];
+\draw (5,0)  arc[radius=1,start angle=0, end angle=180];
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.5]
+\filldraw (0,0) circle (2pt) (1,0) circle (2pt) (2,0) circle (2pt) (3,0) circle (2pt) (4,0) circle (2pt) (5,0) circle (2pt);
+\draw (-0.3,0) --  (5.3,0);
+\draw (2,0)  arc[radius=1,start angle=0, end angle=180];
+\draw (3,0)  arc[radius=1,start angle=0, end angle=180];
+\draw (5,0)  arc[radius=0.5,start angle=0, end angle=180];
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.5]
+\filldraw (0,0) circle (2pt) (1,0) circle (2pt) (2,0) circle (2pt) (3,0) circle (2pt) (4,0) circle (2pt) (5,0) circle (2pt);
+\draw (-0.3,0) --  (5.3,0);
+\draw (2,0)  arc[radius=1,start angle=0, end angle=180];
+\draw (4,0)  arc[radius=1.5,start angle=0, end angle=180];
+\draw (5,0)  arc[radius=1,start angle=0, end angle=180];
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.5]
+\filldraw (0,0) circle (2pt) (1,0) circle (2pt) (2,0) circle (2pt) (3,0) circle (2pt) (4,0) circle (2pt) (5,0) circle (2pt);
+\draw (-0.3,0) --  (5.3,0);
+\draw (3,0)  arc[radius=1.5,start angle=0, end angle=180];
+\draw (4,0)  arc[radius=1.5,start angle=0, end angle=180];
+\draw (5,0)  arc[radius=1.5,start angle=0, end angle=180];
+\end{tikzpicture}\end{center}
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{exercise}
+\end{exercise}
+\begin{example}
+\end{example}
+\begin{assertion}
+\end{assertion}

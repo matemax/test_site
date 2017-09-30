@@ -1,0 +1,115 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Неравенство Караматы
+}{11 февраля 2017 9-11 класс}
+
+
+\begin{task}[Лемма о 4-х точках] Пусть $f$~--- выпуклая функция и $x_1+x_2=y_1+y_2$ ($y_1\geqslant x_1\geqslant x_2 \geqslant x_3$), то
+$
+f(y_1)+f(y_2)\geqslant f(x_1)+f(x_2)
+$.
+\end{task}
+
+
+\begin{definition}
+Даны два упорядоченных набора $a=(a_1, \ldots, a_n)$ и $b=(b_1,\ldots, b_n)$. Будем говорить, что набор $a$ мажорирует набор $b$ ($a\succcurlyeq b$), если
+
+$$\left\{
+     \begin{array}{ll}
+     a_1\geqslant b_1\\
+     a_1 + a_2\geqslant b_1 + b_2\\
+     \ldots\\
+     a_1+\ldots a_n= b_1 +\ldots +  b_n
+     \end{array} \right.$$
+
+  \end{definition}
+  \begin{definition}
+  Раздвиганием набора $(x_1,\ldots, x_n)$ будем назвать одновременное  увеличение $x_i$ и уменьшение $x_j$ с сохранением суммы ($x_i\geqslant x_j$)
+\end{definition}
+     
+\begin{task}[Карамата, Харди, Пойа, Литлвуд]
+От набора  $b=(b_1,\ldots, b_n)$ с помощью последовательных раздвиганий можно перейти к набору  $a=(a_1, \ldots, a_n)$ тогда и только тогда, когда  $a\succcurlyeq b$.
+\end{task}
+
+
+\begin{task}[Неравенство Караматы]
+Пусть $f$ выпуклая на интервале $(a;b)$ функция, тогда для любых двух наборов  $a=(a_1, \ldots, a_n)$ и $b=(b_1,\ldots, b_n)$ принадлежащих данному интервалу с условием $a\succcurlyeq b$ верно, что
+$$
+f(a_1)+\ldots + f(a_n)\geqslant f(b_1)+\ldots+f(b_n).
+$$
+\end{task}
+
+\begin{task}
+Выведете из неравенства Караматы неравенство Йенсена \sub с одинаковыми весами; \sub  произвольными весами. 
+\end{task}
+
+
+\begin{task}
+Пусть $x_1, x_2, \ldots x_n \in [-\dfrac{\pi}{6};\dfrac{\pi}{6}]$. Докажите, что
+$$
+\cos(2x_1-x_2)+ \ldots+ \cos(2x_n-x_1)\leqslant \cos{x_1} + \ldots + \cos{x_n}.
+$$
+\end{task}
+
+\begin{task}
+Для положительных чисел $a_1,\ldots,a_n$ докажите неравенство:
+$$
+\frac{a_1^3}{a_2} + \ldots \frac{a_n^3}{a_1}\geqslant a_1^2+ \ldots a_n^2.
+$$
+({\it Указание: сделайте замену $x_i=\ln{a_i}$.})
+\end{task}
+
+\begin{task}
+Докажите неравенство для положительных $a,b,c$:
+$$
+\frac{ab}{c^2} +\frac{bc}{a^2}+\frac{ca}{b^2}\geqslant\sqrt{\frac{ab}{c^2}}+\sqrt{\frac{bc}{a^2}}+\sqrt{\frac{ca}{b^2}}
+$$
+\end{task}
+
+
+\begin{task}
+Для положительных чисел $a_1,\ldots,a_n$ докажите неравенство:
+$$
+(1+\frac{a_1^2}{a_2})(1+\frac{a_2^2}{a_3})\ldots(1+\frac{a_n^2}{a_1})\geqslant (1+a_1)(1+a_2)\ldots(1+a_n).
+$$
+\end{task}
+
+\begin{task}
+Пусть $a, b, c$ положительные числа,  докажите неравенство: 
+$$
+a^3+b^3+c^3 + 3abc \geqslant a^2b+b^2c+c^2a+a^2c+b^2a+c^2b.
+$$
+\end{task}
+
+\begin{task}
+Сформулируйте и докажите весовое неравенство Караматы.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

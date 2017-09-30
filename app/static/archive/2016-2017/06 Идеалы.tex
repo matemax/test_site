@@ -1,0 +1,104 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Идеалы 
+}{19 октября 2016 9-11 класс}
+
+\begin{definition}
+Идеалом в коммутативном кольце $K$, называется множество $I$, замкнутое относительно сложения и для любого $a\in K$ верно, что  $aI\subseteq I$, обозначается $I\triangleleft K$. 
+\end{definition}
+
+
+\begin{exercise}
+\sub Привидите пример идеалов в кольце целых чисел. \sub Найдите все идеалы в поле.  \sub Привидите пример идеала в кольце $K[x]$.
+\end{exercise}
+
+\begin{definition}
+Идеал  $I\triangleleft K$ называется порождённым, элементами $a_1,\ldots,a_n$, если $\forall a\in I$ существуют $b_1,\ldots,b_n\in K$, что $a=\sum b_ia_i$.
+\end{definition}
+
+
+\begin{definition}
+Идеал $I\triangleleft K$ называется главным, если существет $k\in I$ такой, что $\forall i\in I$ верно, что $i~\vdots~k$. Обозначается $I=(k)$.
+\end{definition}
+
+\begin{exercise}
+Привидите пример неглавного идеала в $K[x,y]$.
+\end{exercise}
+
+\begin{task}
+Докажите, что все идеалы в кольце целых чисел и кольце многочленов от одной переменной над полем главные.
+\end{task}
+
+\begin{definition}
+Радикалом идеала $I\triangleleft K$ называется множество элементов $J\subseteq K$, что $\forall j \in J~\exists m\in \mathbb{N}$, что $j^m\in I$, обозначается $J=\sqrt{I}$. 
+\end{definition}
+
+\begin{exercise}
+Найдите радика идеала $I=((x-1)^2(x-2)^3)\triangleleft \mathbb{R}[x]$.
+\end{exercise}
+
+\begin{task}
+Докажите, что радикал идеала тоже идеал.
+\end{task}
+
+\begin{definition}
+Пусть $I\triangleleft K$, тогда два элемента $a,b\in K$ называются сравнимыми по модулю идеала, если $a-b \in I$. Обозначается $a\mod_{I} b$.
+\end{definition}
+
+
+\begin{definition}
+Многообразием идеала $I\triangleleft K[x_1,x_2,\ldots x_n]$, где $K$ поле, назвается множество точек $V \subseteq K^n$ таких, что $\forall x_0\in V$ и $\forall f\in I$ верно, что $f(x_0)=0$, обозначается $V(I)$.
+
+Пусть $V'\subseteq K^n$, тогда идеалом, порождённым $V'$ называется множество всех  многочленов в $f\in K[x_1,x_2,\ldots x_n]$ таких, что $\forall x_0\in V'$ верно, что $f(x_0)=0$, обозначается $I(V')$
+\end{definition}
+
+\begin{theorem}{\bf теорема Гильберта о нулях.}
+Для любого алгебраически замкнутого поля $K$ и идеала $I\triangleleft K[x_1,x_2,\ldots x_n]$ верно, что $\sqrt{I}=I(V(I))$.
+\end{theorem}
+\begin{theorem}{\bf теорема Гильберта о нулях, слабая версия.}
+Для любого алгебраически замкнутого поля $K$ и идеала $I\triangleleft K[x_1,x_2,\ldots x_n]$ верно, что $I=K\Leftrightarrow V(I)=\emptyset$.
+\end{theorem}
+\begin{task}
+ Число  $4x+3y$  делится на 7. Докажите, что число $4x+10y$ делится на 7.
+\end{task}
+
+\begin{task}
+$a, b, c$~--- натуральные числа такие, что $ab+9b+81$ и $bc+9c+81$ делятся на 101. Докажите, что тогда и $ca+9a+81$ тоже делится на 101.
+\end{task}
+\begin{task}
+\sub Существуют ли многочлены $P(x,y,z)$, $Q(x,y,z)$, $R(x,y,z)$, для которых выполнено тождество 
+       $(x-y+1)^3 P + (y-z-1)^3Q + (z-2x+1)^3 R =1$? \\
+\sub Тот же вопрос для тождества  $(x-y+1)^3 P + (y-z-1)^3Q + (z-x+1)^3 R =1$?. 
+\end{task}
+
+\begin{task}
+Существует ли такой многочлен $P(x, y)$ с вещественными коэффициента-ми, что многочлен $P(x, y)^2+1$ делится на многочлен $x^2+y^2+1$?
+\end{task}
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

@@ -1,0 +1,109 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\newtheorem{theorem}{Теорема}
+\usepackage{amsthm}
+\pagestyle{empty}
+%\topmargin=-2cm \textheight=26cm
+%\evensidemargin=-0,3cm \oddsidemargin=-0,3cm
+\textwidth=17cm
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newcommand{\sleg}[2]{\left(\frac{#1}{#2}\right)}
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 14-15.}{Квадратичные вычеты и дроби
+}{26 апреля 2014 8 класс}
+
+\begin{definition}
+Пусть $Z_p$ множество остатков при делении на простое число $p$ и $a\in Z_p, a\ne 0$. Тогда можно определить величину $\dfrac{c}{a}$~--- это  элемент $b\in Z_p$ такой, что $ba\mod_p c$.
+\end{definition}
+
+\begin{exercise}
+\sub Докажите, что \sub $\dfrac{a}{1}\mod_p a $; $\dfrac{1}{a}\dfrac{1}{b}\mod_p \dfrac{1}{ab}$;\sub $\dfrac{c}{d}\dfrac{b}{a}\mod_p \dfrac{bc}{ad}$; $\sub \dfrac{1}{a}+\dfrac{1}{b}\mod_p \dfrac{a+b}{ab}$.
+\end{exercise}
+
+\begin{definition}
+Число $r\not \mod_p 0$ называется \emph{квадратичным вычетом}  модулю $p$ (простое нечётное), если существует такое целое $a$ такое, что $r\mod_p a^2$.  
+\end{definition}
+
+\begin{task}
+Докажите, что квадратное уравнение $ax^2+bx+c=0,a\ne 0$ по простому модулю $p>2$ имеет решение тогда и только тогда, когда $D=b^2-4ac$ квадратичный вычет по модулю $p$.
+\end{task}
+
+\begin{task}
+Докажите, что произведение:\\
+ \sub кадратичного вычета на квадратичный вычет это  квадратичный вычет;\\
+ \sub кадратичного вычета на квадратичный невычет это  квадратичный невычет;\\
+ \sub квадратичный невычета на квадратичный невычет это  квадратичный вычет.\\
+ \sub Если $a$  квадратичный  вычет, то $\dfrac{1}{a}$ тоже квадратичный вычет и наоборот.
+\end{task}
+\begin{task}
+Пусть~$p$~--- нечетное простое число. \sub Докажите, что если~$a$~--- квадратичный вычет по
+модулю~$p$, то $a^{p-1 \over 2} \mod_p 1$.\\
+\sub Докажите, что произвдение всех квадратичных вычетов сравнимо либо с $1$  либо с $-1$.\\
+\sub Докажите, что  что если~$a$~--- квадратичный невычет по
+модулю~$p$, то $a^{p-1 \over 2}\mod_p -1$.{\it Указание: вспомните как доказывалась МТФ и теорема Эйлера.}
+\end{task}
+
+
+\begin{definition}
+Пусть~$p$  простое число. \emph{Символом Лежандра} называется выражение, обозначаемое $\sleg{a}{p}$,
+равное~$1$, если $a$~--- квадратичный вычет по модулю~$p$; $-1$,
+если~$a$~--- невычет по модулю~$p$ и~$0$, если $a$ кратно~$p$.
+\end{definition}
+
+\begin{assertion}
+Из задачи \textbf{2} следует, что если $p$ нечетно, то $\sleg{a}{p} \mod_p a^{p-1 \over 2}$.
+\end{assertion}
+
+\begin{task}
+\sub При каких $p$ вычет $-1$ является квадратичным вычетом по модулю $p$
+(где $p$~--- нечетное простое число)?\\
+\sub{\bf Теорема Жирара.} Пусть $x^2+y^2$
+делится на простое число $p=4k+3$. Докажите тогда, что $x$ и $y$
+делятся на $p$.
+\end{task}
+
+\begin{task}
+Мы знаем, что любой ненулевой остаток $a\in Z_p$ задаёт перестановку элементов в $Z_p$ по правилу $b\to ab$. Пусть $a$  квадратичный вычет, найдите чётность перестановки, связанной с $a$.
+\end{task}
+
+
+
+
+
+\begin{task}
+Докажите, что для любого простого $p$ существует такое натуральное $n$, что $2^n+3^n+6^n-1$ делится на $p$.
+\end{task}
+
+
+\begin{task}
+Решите в целых числах 
+$$\left\{
+     \begin{array}{ll}
+     a^2+b^2=5cd\\
+     c^2+d^2=5ab
+     \end{array} \right.$$
+\end{task}
+
+\end{document}
+
+
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{exercise}
+\end{exercise}
+\begin{example}
+\end{example}
+\begin{assertion}
+\end{assertion}

@@ -1,0 +1,71 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Арифметика остатков
+}{7 марта 2015 9-11 класс}
+
+
+
+\begin{exercise}
+\sub Рассмотрим $n\in \mathbb{Z}$, докажите, что остатки при делении на $n$ значений любого многочлена будут периодической функцией.\\
+\sub Докажите, что при фиксированном $a$ остатки при делении на $n$ выражения $a^{g(k)}$ будут периодической функцией.
+\end{exercise}
+
+\begin{definition}
+Пусть $a\in \mathbb{Z}_n, (a,n)=1$, тогда показателем $a$  называется наименьшее натуральное $l$ такое, что $a^l\mod_n 1$.
+\end{definition}
+
+
+\begin{task} Пусть $P_1(x), P_2(x)\ldots, P_n(x)$~--- непостоянные многочлены с целыми коэффициентами. Докажите, что существует бесконечно много таких натуральных $k$, что все числа $|P_1(k)|, |P_2(k)|\ldots, |P_n(k)|$ составные.
+\end{task}
+
+\begin{exercise}
+Докажите следующие свойства показателей:\\
+\sub Для любого $a\in \mathbb{Z}_n, (a,n)=1$ показатель существует.\\
+\sub Пусть у $a$ показатель  $l$, тогда  все числа $a^0,a^1,\ldots,a^{l-1}$ попарно несравнимы по модулю $n$.\\
+\sub Пусть у $a$ показатель  $l$, тогда, если выполнено $a^k\mod_n a^{k'}$, то $k\mod_l k'$.\\
+\sub Пусть у $a$ показатель  $lm$, тогда у числа $a^m$ показатель $l$.\\
+\sub Пусть у $a$ показатель $x$, у $b$ показатель $y$ и $(x,y)=1$, тогда $ab$ имеет показатель $xy$.
+\end{exercise}
+\begin{task}
+По  простому модулю $p$ существует остаток с  показателем $p-1$, такие остатки называются \emph{первообразными корнями по модулю $p$.}
+({\it Указание/ план:\\ пусть $p-1=q_1^{a_1}\ldots q_n^{a_n}$, любой показателья является делителем этого числа. Тогда либо найдётся число с показателем $q_1^{a_1}$., либо в разложение на простые множители любого показателя $q_1$ будет входить в степень меньше, чем $a_1$. Если выполнено второе, рассмотрите   многочлен $x^t-1$ над $\mathbb{Z}_p$, где $t=\dfrac{p-1}{q_1}$.})\end{task}
+
+\begin{task}Найдите все такие многочлены с целыми коэффициентами, что если $(m,n)=1$, то $(f(m),f(n))=1$.
+\end{task}
+
+\begin{task}
+Докажите, что для любого натурального $a>1$  можно выбрать бесконечное множество чисел вида $a^n(a+1)-1$ таких, что они все попарно взаимно просты.
+\end{task}
+\begin{task}
+ Найдите все многочлены $f(x)$ с целыми коэффициентами такие, что
+числа~$f(n)$ и $f(2^{n})$ взаимно просты при каждом натуральном $n$.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

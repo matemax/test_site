@@ -1,0 +1,135 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{ 
+Интегралы, задачи}{08 ноября 2016 9-11 класс}
+\begin{theorem}[Кантора о равномерной непрерывности]
+Если функция $f(x)$ непрерывна на отрезке (компакте), то она равномерно 
+непрерывна на нём.
+\end{theorem}
+
+\begin{task}
+ Докажите, что если функция $f(x)$ непрерывна на отрезке $[a,b]$,
+то она интегрируема (по Риману) на нём. 
+
+\medskip
+Интеграл от функции $f(x)$ по отрезку $[a,b]$, обозначается через $$\int_a^b f(x)\, dx.$$
+Также, положим по определению 
+\[
+\int_b^a f(x)\, dx=-\int_a^b f(x)\, dx\text{, }\int_a^a f(x)\, dx=0. 
+\]
+\end{task}
+
+\begin{task}
+ a) Докажите, что если функция $f(x)$ интегрируема по большему из отрезков с концами $a$ и $b$, $b$ и $c$, $c$ и $a$,
+то она интегрируема и по двум другим и имеет место равенство
+\[
+\int_a^c f(x)\, dx=\int_a^b\, f(x)+\int_b^c f(x)\, dx, 
+\]
+каково бы ни было взаимное расположение точек $a$, $b$, $c$.\\
+b) Докажите, что если функции $f(x)$ и $g(x)$ интегрируемы на отрезке $[a,b]$, 
+то для любых чисел $\alpha$ и $\beta$ функция $(\alpha f+\beta g)(x)$ также
+интегрируема на нём и имеет место равенство
+\[
+\int_a^b (\alpha f+\beta g)(x)\, dx=\alpha\cdot \int_a^b f(x)\, dx+\beta\cdot \int_a^b g(x)\, dx.
+\]
+\end{task}
+
+\begin{task}
+ a) Докажите, что если функция $f(x)$ интегрируема на отрезке $[a,b]$, $a<b$ и $f(x)\geqslant 0$ 
+на всём отрезке $[a,b]$, то и $\int_a^b f(x)\, dx\geqslant 0$.\\
+b) Докажите, что если функции $f(x)$ и $g(x)$ интегрируемы на отрезке $[a,b]$, $a<b$ и $f(x)\geqslant g(x)$ 
+на всём отрезке $[a,b]$, то и $\int_a^b f(x)\, dx\geqslant \int_a^b g(x)\, dx$.
+\end{task}
+\begin{task}
+ Докажите, что если функция $f(x)$ непрерывна на отрезке $[a,b]$, то найдётся такое число $c\in [a,b]$,
+что $\int_a^b f(x)\, dx=(b-a)\cdot f(c)$.
+\end{task}
+
+\begin{definition}
+Пусть функция $f(x)$ интегрируема на отрезке $[a,b]$. Определим на отрезке $[a,b]$ функцию
+\[
+\Phi(x)=\int_a^x f(t)\, dt.
+\]
+Иногда функцию $\Phi(x)$ называют {\it интегралом с переменных верхним пределом}.
+\end{definition}
+
+\begin{task}
+ Докажите, что функция $\Phi(x)$ непрерывна на отрезке $[a,b]$.
+\end{task}
+
+\begin{task}
+ Докажите, что если функция $f(x)$ непрерывна в точке $c\in [a,b]$,
+то функция $\Phi(x)$ дифференцируема в точке $c$ и $\Phi'(c)=f(c)$.
+\end{task}
+
+\begin{task}
+ (основная формула интегрального исчисления; формула Ньютона--Лейбница). 
+Пусть функция $f(x)$ непрерывна на отрезке $[a,b]$, функция $F(x)$~--- её
+{\it первообразная} на этом отрезке, т.е. такая дифференцируемая на отрезке
+$[a,b]$ функция, что для любой точки $c\in [a,b]$ выполнено $F'(c)=f(c)$.
+Тогда
+\[
+\int_a^b f(x)\, dx=F(b)-F(a)\mathop{=}\limits^{\text{def}} F(x)\bigl|_a^b.
+\]
+\end{task}
+
+\begin{task}
+ Пусть функция $f(x)$ непрерывна на отрезке $[a,b]$. Пусть также
+имеется функция $\varphi(t)$, определённая на отрезке $[\alpha,\beta]$,
+причём \\
+1) функция $\varphi(x)$ имеет непрерывную производную на отрезке $[\alpha,\beta]$;\\
+2) значения функции $\varphi(t)$ на отрезке $[\alpha,\beta]$ не выходят за пределы $[a,b]$;\\
+3) $\varphi(\alpha)=a$, $\varphi(\beta)=b$.
+
+Тогда имеет место формула 
+\[
+\int_a^b f(x)\, dx=\int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)\, dx=\int_{\alpha}^{\beta} f(\varphi(t)) \varphi'(t)\, dt.
+\]
+\end{task}
+
+\begin{task}
+ Составьте таблицу основных интегралов. 
+\end{task}
+
+\begin{task}
+ Пусть $\alpha\geqslant 0$. 
+Используя интеграл, найдите $\lim_{n\to \infty} \dfrac{1^\alpha+2^\alpha+\ldots+n^\alpha}{n^{\alpha+1}}$.
+\end{task}
+
+\begin{task}
+ Для любых действительных чисел $a_1$, $a_2$, \ldots, $a_n$ докажите неравенство
+\[
+\sum\limits_{1\leqslant i, j\leqslant n} \frac{a_ia_j}{i+j-1}\geqslant 0.
+\]
+\end{task}
+
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

@@ -1,0 +1,91 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Многочлены Чебышёва
+}{8 апреля 2017 9-11 класс}
+
+\begin{definition}
+\end{definition}
+
+\begin{task}
+Пусть $T_n(x)=\cos(n\arccos x)$.  
+\sub Найдите $T_n$ при $n=0,1,2,3$.
+
+\sub Докажите, что $T_{n+1}(x) = 2T_n(x)-T_{n-1}(x)$.
+
+\sub Докажите, что $T_n(x)$~--- многочлен степени~$n$ и найдите его старший коэффициент. Выведите рекуррентную формулу.
+
+\sub Найдите все его корни и экстремумы.
+\end{task}
+
+\begin{task}
+Докажите, что $T_n(x)$ при чётных $n$ является чётной функцией, а при нечётных~--- нечётной.
+\end{task}
+
+\begin{definition}
+Многочлен $T_n(x)$ называется \emph{многочленом Чебышёва}.
+\end{definition}
+
+\begin{definition}
+Величина $\max\limits_{x\in[a,b]}|f(x)|$ называется {\it уклонением от нуля} многочлена $f(x)$ 
+на отрезке $[a,b]$.
+\end{definition}
+
+\begin{task}\sub Найдите уклонение многочлена Чебышёва на отрезке $[-1;1]$.
+
+\sub Докажите,что  $\max\limits_{x\in[-1,1]}|f(x)|\ge{1\over 2^{n-1}}$.
+
+\sub Докажите, что если $\max\limits_{x\in[-1,1]}|f(x)|={1\over 2^{n-1}}$,
+то $f(x)={1\over2^{n-1}}T_n(x)$.
+\end{task}
+
+\begin{remark}
+Таким образом, многочлен ${1\over2^{n-1}}T_n(x)$ является наименее уклоняющимся от нуля среди всех
+унитарных многочленов степени~$n$.
+\end{remark}
+
+\begin{task}
+\sub Докажите, что $T_m(T_n(x))=T_n(T_m(x))$.
+
+\sub ~Пусть $z\in\mathbb C$, $|z|=1$. Вычислите $T_n\left({z+z^{-1}\over2}\right)$.
+
+\sub Найдите $T_n(\sin \alpha)$.
+\end{task}
+\begin{task}
+Докажите, что $P_n(x)=2T_n({x\over2})$ также является многочленом с целыми коэффициентами.
+
+\sub Докажите, что если $\alpha\in\mathbb{Q}$ и $\cos(\alpha\pi)\in\mathbb{Q}$, то $\cos(\alpha\pi)\in\{0,\pm1,\pm{1\over2}\}$.
+
+\sub Докажите, что при $n>4$ не существует правильного $n$-угольника с вершинами в узлах клечатой сетки.
+\end{task}
+\begin{task}
+Известно, что $\sin \alpha = 3/5$. Докажите, что $\sin 25\alpha$ имеет вид
+$\dfrac{n}{5^{25}}$ , где $n$~--- целое, не делящееся на 5.
+\end{task}
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

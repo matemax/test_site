@@ -2,7 +2,84 @@
 
 
 {% block content %}
-         <div class="form-group">
- <a href="/lessons/01_apollonian_circles" class="btn btn btn-link">Все занятия в учебном году</a>
-     </div>
+    <div class="container">
+        <font size="3">
+            <div class="jumbotron">
+
+                В данном разделе представлены материалы занятий парааллели, которая была с сентября 2010 года по май
+                2017 года с нами. По техническим причинам материалы доступны с 7-го класса данной параллели.
+            </div>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion2016-2017" href="#collapse2016-2017">
+                                11-й класс, 2016-2017</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2016-2017" class="panel-collapse collapse">
+                        {% include 'archive2016-2017.html' %}
+                    </div>
+                </div>
+                <div class="panel panel-default" id="accordion2015-2016">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2015-2016">
+                                10-й класс, 2015-2016</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2015-2016" class="panel-collapse collapse">
+                        {% include 'archive2015-2016.html' %}
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2014-2015">
+                                9-й класс, 2014-2015</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2014-2015" class="panel-collapse collapse">
+                        {% include 'archive2014-2015.html' %}
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2013-2014">
+                                8-й класс, 2013-2014</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2013-2014" class="panel-collapse collapse">
+                        {% include 'archive2013-2014.html' %}
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2012-2013">
+                                7-й класс, 2012-2013</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2012-2013" class="panel-collapse collapse">
+                        {% include 'archive2012-2013.html' %}
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="jumbotron">Огромная
+                благодарность детям, которые занимались в это время у нас, и людям, с которыми мы делали этот кружок.
+                Отдельное спасибо Онищенко Татьяне, Куценку Кириллу, Сипливому Максиму, Чулкову Андрею, Василию
+                Контореру, Глебу Шуплякову, Малюгину Степану, Жукову Станиславу, Алексею Шапцеву.
+
+                <div class="container">
+                    <img src="/static/img/mmmf2017end.jpg" class="img-thumbnail" alt="Последнее занятие">
+                </div>
+
+            </div>
+        </font>
+
+    </div>
+
 {% endblock %}

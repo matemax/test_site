@@ -1,0 +1,79 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Последний разнобой
+}{16 мая 2014-2015 9-11 класс}
+
+
+\begin{task}
+Докажите неравенства \sub $2(a^3+b^3+c^3)\geqslant a^2b+a^2c+b^2a+b^2c+c^2a+c^2b\geqslant 6abc$; \sub $a^4+b^4+c^4\geqslant a^2bc+b^2ac+c^2ab$; \sub  $a^pb^q+a^qb^p\leqslant a^{p+1}b^{q-1}+a^{q-1}b^{p+1}$ для положительных $a,b,c$  и натуральных $p,q$.
+\end{task}
+
+Пусть есть два набора чисел $x=(x_1, x_2, \ldots, x_n)$ и 
+$y=(y_1, y_2, \ldots, y_n)$.
+
+\begin{definition}Пусть  $x_1\geq x_2\geq x_3\geq \ldots \geq x_n$ и $y_1\geq y_2\geq y_3\geq \ldots \geq y_n$.\\
+Будем говорить, что набор $x$ мажорирует набор $y$, и писать $x\succ y$,
+если выполняются следующие условия:\\
+1) $\sum\limits_{i=1}^n x_i=\sum\limits_{i=1}^n y_i$\\  
+2) для любого $1\leq k\leq n$ выполняется неравенство 
+ $\sum\limits_{i=1}^k x_i\geq \sum\limits_{i=1}^k y_i$
+\end{definition}
+
+
+
+\begin{task}
+Пусть $a_1,a_2,\ldots,a_n$ и $b_1,b_2,\ldots,b_n$~--- два набора целых неотрицательных чисел, тогда следующее неравенство верно
+$$
+\sum\limits_{\sigma\in S_n} x_1^{(a_{\sigma(1)})}\ldots x_n^{(a_{\sigma(n)})}\geqslant \sum\limits_{\sigma\in S_n} x_1^{(b_{\sigma(1)})}\ldots x_n^{(b_{\sigma(n)})}
+$$
+для положительных $x_1,\ldots,x_n$ тогда и только тогда, когда набор $a$ мажорирует набор $b$.
+\end{task}
+
+\begin{task}
+Пусть $a,b,c$~--- положительные числа такие, что $abc =1$. Докажите неравенство
+$$
+\dfrac{(a^5+b^5+c^5)(a+b+c)}{a^3+b^3+c^3}\geqslant 3.
+$$
+\end{task}
+
+\begin{task}На плоскости задан набор векторов, длина каждого из которых не превосходит 1. Докажите, что все векторы можно повернуть на один и тот же угол по или против часовой стрелки так, что длина суммы полученных векторов будет не больше 1.
+\end{task}
+
+
+\begin{task}Докажите, что существует последовательность, состоящая из натуральных чисел такая, что любое натуральное число единственным образом представляется в виде разности двух ее членов.
+\end{task}
+
+\begin{task}
+На плоскости  расположено $n$ точки. Докажите, что можно выбрать три из них так, чтобы угол <<между ними>> был не больше $\dfrac{180}{n}$.
+\end{task}
+
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

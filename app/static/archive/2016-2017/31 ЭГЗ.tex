@@ -1,0 +1,91 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Теорема Эрд\"еша-Гинзбурга-Зива
+}{13 мая 2017 9-11 класс}
+
+
+\begin{task}
+\sub Докажите, что среди $n$ целых чисел найдется несколько, сумма которых
+делится на $n$.
+
+\sub Докажите, что среди \dots целых чисел найдется ровно $n$, 
+сумма которых делится на $n$.
+
+
+\sub Докажите, что существуют такие $2n-2$ целых числа, что среди них
+не найдется ровно $n$ чисел, сумма которых делится на $n$.
+\end{task}
+
+
+\begin{theorem}[Эрд\"еша-Гинзбурга-Зива] Среди любых $2n-1$ целого числа
+найдется ровно $n$ чисел, сумма которых делится на $n$.
+\end{theorem}
+\begin{task}
+Докажите, что теорема ЭГЗ верна для $n=a$ и для $n=b$, то она верна и для
+$n=ab$.
+\end{task}
+
+\begin{task}
+\sub Даны числа $x_1,\ldots, x_{2p-1}\in\mathbb{Z}_p$. Найдите, чему равна  сумма 
+$$
+\sum\limits_{i_1<i_2<\ldots<i_p}(x_{i_1}+\ldots+x_{i_p})^{p-1}.
+$$
+
+\sub Докажите теорему ЭГЗ.
+\end{task}
+
+
+\begin{theorem}[Теорема Шевале]
+Пусть $F_1(x_1,\ldots,x_n),\ldots,F_k(x_1,\ldots,x_n)\in \mathbb{Z}[x_1,\ldots,x_n]$ многочлены с нулевым свободным членом и $\sum\limits_{i=1}^k \deg  F_i(x_1,\ldots,x_n) <n$, то система 
+$$
+F_1(x_1,\ldots,x_n)\mod_p 0,\ldots, F_k(x_1,\ldots,x_n)\mod_p 0
+$$
+имеет ненулевое решение.
+\end{theorem}
+
+\begin{theorem}[Роньяи] Для простого $p$ cреди любых $4p-2$ векторов в $\mathbb{Z}^{2}$ можно выбрать $p$, среднее арифметическое которых также принадлежит  $\mathbb{Z}^{2}$.
+\end{theorem}
+
+\begin{exercise}
+Докажите, что в теореме Роньяи нельзя обойтись $4p-4$ векторами.
+\end{exercise}
+\begin{task}
+Пусть $y_1=(a_1,b_1), \ldots, y_{3p}=(a_{3p},b_{3p})$ - целочисленные вектора. Известно, что $\sum\limits_{i=1}^{3p}a_i\mod_p 0$ и $\sum\limits_{i=1}^{3p}b_i\mod_p 0$. Тогда сущестуют $i_1<i_2<\ldots<i_p$ такие, что $a_{i_1}+\ldots +  a_{i_p}\mod_p 0$ и  $b_{i_1}+\ldots +  b_{i_p}\mod_p 0$. \\({\it Указание: рассмотрите следующиие многочлены $F_1(x_1,\ldots, x_{3p-1})=\sum\limits_{i=1}^{3p-1}a_ix^{p-1}$, $F_2(x_1,\ldots, x_{3p-1})=\sum\limits_{i=1}^{3p-1}b_ix^{p-1}$, $F_3(x_1,\ldots, x_{3p-1})=\sum\limits_{i=1}^{3p-1}x^{p-1}$.})
+\end{task}
+
+\begin{task}
+Пусть $m=4p-2$. Рассмотрим многочлен $F=((\sum\limits_{i=1}^{m}a_ix_i)^{p-1}-1)((\sum\limits_{i=1}^{m}b_ix_i)^{p-1}-1)((\sum\limits_{i=1}^{m}x_i)^{p-1}-1)(\sigma_p(x_1,\ldots,x_m)-2)$. В предположениии, что теорема Роньяи неверна для набора векторов $y_1=(a_1,b_1), \ldots, y_{m}=(a_{m},b_{m})$:\\
+\sub Найдите значения этого многочлена, когда среди $x_i$  ровно $p$ или $3p$ единиц, остальные 0.\\
+\sub Найдите значения этого многочлена, когда среди $x_i$ ровно $2p$ единиц, остальные 0.\\
+\sub Найдите значения этого многочлена, когда среди $x_i$ все 0 или 1 и количество единиц не делится на $p$.
+\sub Найдите многочлен $\mathbb{Z}_p[x_1,\ldots,x_m]$ от переменных такой, что степень по каждой переменной не превышает один и его значения на еденичном кубе совпадают со значениями многочлена $F$.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

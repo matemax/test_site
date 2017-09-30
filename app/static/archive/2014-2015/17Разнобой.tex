@@ -1,0 +1,102 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Разнобой на пройденное
+}{14 февраля 2015 9-11 класс}
+
+
+\begin{task} Решите уравнение $z^3=\bar{z}$. Можете ли вы объяснить, почему корней получилось больше, чем степень уравнения?
+\end{task}
+
+\begin{task}
+\sub Докажите, что количество путей по линиям сетки из точки $(0,0)$ в точку $(n,n)$, не поднимающихся выше диагонали $y=x$, равно $C_n$.
+\begin{center}
+\includegraphics{cat-2.eps}
+\end{center}
+
+
+\sub Докажите, что количество способов разрезать ``клетчатый равнобедренный прямоугольный треугольник'' со стороной $n$ на $n$ прямоугольников равно~$C_n$.
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\draw (0,0) -- (3,0) -- (3,-1) -- (2,-1) -- (2,-2) -- (1,-2) -- (1,-3) -- (0,-3) -- (0,0);
+\draw (0,-1) -- (2,-1);
+\draw (0,-2) -- (1,-2);
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.6]
+\draw (0,0) -- (3,0) -- (3,-1) -- (2,-1) -- (2,-2) -- (1,-2) -- (1,-3) -- (0,-3) -- (0,0);
+\draw (0,-1) -- (2,-1);
+\draw (1,-1) -- (1,-2);
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.6]
+\draw (0,0) -- (3,0) -- (3,-1) -- (2,-1) -- (2,-2) -- (1,-2) -- (1,-3) -- (0,-3) -- (0,0);
+\draw (2,0) -- (2,-1);
+\draw (0,-2) -- (1,-2);
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.6]
+\draw (0,0) -- (3,0) -- (3,-1) -- (2,-1) -- (2,-2) -- (1,-2) -- (1,-3) -- (0,-3) -- (0,0);
+\draw (1,-1) -- (2,-1);
+\draw (1,-2) -- (1,0);
+\end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=0.6]
+\draw (0,0) -- (3,0) -- (3,-1) -- (2,-1) -- (2,-2) -- (1,-2) -- (1,-3) -- (0,-3) -- (0,0);
+\draw (2,-1) -- (2,0);
+\draw (1,-2) -- (1,0);
+\end{tikzpicture}
+\end{center}
+
+
+\end{task}
+
+
+\begin{task}
+[Свёртка Вандермонда] \sub Докажите, что \[C_{a+b}^k=\sum\limits_{i=0}^{k}C_a^iC_b^{k-i}\]
+
+\sub Обозначим  $\binom{a}{k}=\frac{a(a-1)(a-2)\ldots(a-k+1)}{k!}$, $a \in \mathbb{R}, k \in \mathbb{N}\cup\{0\}$. Числа $\binom{a}{k}$ называются \emph{(обобщенными) биномиальными коэффициентами}. Докажите, что свёртка Вандермонда верна и для обобщённых биномиальных коэффициентов.
+\end{task}
+
+
+
+\begin{task}
+Головоломка представляет собой два цикла  из \sub 7; \sub 8 шариков каждый, имеющих один общий шарик. Можно поворачивать  каждый цикл. Можно ли добиться произвольного расположения шариков?
+\end{task}
+
+
+\begin{task}
+Пусть на стороне $AC$ выбрана точка $D$. Обозначим через $I_A$ и $I_C$ центры окружностей вписанных в треугольники $ABD$ и $CBD$ соответственно, а через $B_0'$ --- точку касания вписанной окружности $\triangle ABC$ со стороной $AC$. Докажите, что $\angle I_AB_0'I_C = 90^\circ$.
+\end{task}
+
+\begin{task}
+\sub В треугольнике $ABC$, в котором $AB + BC = 3AC$, вписанная окружность с центром $I$, 
+касается сторон $AB$ и $BC$ в точках $D$ и $E$, соответственно. Пусть $K$ и $L$ симметричны точкам
+$D$ и $E$ относительно $I$. Докажите что $ACKL$ вписанный.
+
+\sub Для такого треугольника точка Нагеля лежит на его вписанной окружности. Почему?
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

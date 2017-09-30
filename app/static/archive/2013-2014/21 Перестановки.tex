@@ -1,0 +1,103 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\newtheorem{theorem}{Теорема}
+\pagestyle{empty}
+\topmargin=-2cm \textheight=25cm
+\evensidemargin=-2cm \oddsidemargin=-0.7cm
+\textwidth=17cm
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 14-15.}{Перестановки, цикловая структура, порядок перестановки
+}{5 апреля 2014 8 класс}
+
+\begin{definition}
+Перестановкой $n$ элементов (или подстановкой из $n$ элементов) называется биекция $n$-элементного множества на себя. Множество всех перестановок множества $\{1,\ldots,n\}$ обозначается $S_n$.
+
+\end{definition}
+
+\begin{definition}
+Произведением перестановок называется их композиция как отображений (обозначение: $\alpha\beta$). Перестановка, переводящая каждый элемент в себя, называется тождественной и обозначается e.
+\end{definition}
+
+\begin{definition}
+Порядком перестановки $\alpha$  называется наименьшее натуральное число $n$, такое что $\alpha^n=e$ (почему такое $n$ существует?).
+\end{definition}
+
+
+\begin{task}
+\sub Вычислите произведение перестановок $ \left(\begin{array}{c}  1 \\ 3\end{array}\begin{array}{c}  2\\ 2\end{array}  \begin{array}{c}  3 \\ 1\end{array}\begin{array}{c}  4 \\ 4\end{array}\right)$ и $ \left(\begin{array}{c}  1 \\ 2\end{array}\begin{array}{c}  2\\ 1\end{array}  \begin{array}{c}  3 \\ 4\end{array}\begin{array}{c}  4 \\ 3\end{array}\right)$.\\
+\sub Вычислите $ \left(\begin{array}{c}  1 \\ 3\end{array}\begin{array}{c}  2\\ 6\end{array}  \begin{array}{c}  3 \\ 2\end{array}\begin{array}{c}  4 \\ 5\end{array} \begin{array}{c}  5 \\ 1\end{array}\begin{array}{c}  6 \\ 4\end{array} \right)^2$ и 
+$ \left(\begin{array}{c}  1 \\ 3\end{array}\begin{array}{c}  2\\ 6\end{array}  \begin{array}{c}  3 \\ 2\end{array}\begin{array}{c}  4 \\ 5\end{array} \begin{array}{c}  5 \\ 1\end{array}\begin{array}{c}  6 \\ 4\end{array} \right)^4$.\\
+\sub Вычислите $ \left(\begin{array}{c}  1 \\ 4\end{array}\begin{array}{c}  2\\ 5\end{array}  \begin{array}{c}  3 \\ 2\end{array}\begin{array}{c}  4 \\ 1\end{array} \begin{array}{c}  5 \\ 3\end{array}\right)^{100}$.
+\end{task}
+
+
+\begin{definition}
+Порядком перестановки $\alpha$  называется наименьшее натуральное число $n$, такое что $\alpha^n=e$ (почему такое $n$ существует?).
+\end{definition}
+
+\begin{task}
+Найдите порядок перестановки  $ \left(\begin{array}{c}  1 \\ 3\end{array}\begin{array}{c}  2\\ 6\end{array}  \begin{array}{c}  3 \\ 2\end{array}\begin{array}{c}  4 \\ 5\end{array} \begin{array}{c}  5 \\ 1\end{array}\begin{array}{c}  6 \\ 4\end{array} \right)$.
+\end{task}
+
+\begin{definition}
+Графом перестановки $\alpha$  называется ориентированный граф, вершины которого   числа от  $1$ до $n$, а ребра ведут из $i$ в  $\alpha(i)$.
+\end{definition}
+
+\begin{task}
+\sub Докажите, что любая перестановка разбивается на непересекающиеся циклы (т.е. её граф представляет собой объединение непересекающихся циклов).\\
+\sub Граф перестановки  $\alpha$ распадается на циклы длины $d_1$, $d_2$, \ldots, $d_k$. Чему равен порядок $\alpha$?\\
+\sub Пусть $\alpha\in S_n$, оцените через $n$ и  $k$ порядок $\alpha$.
+\end{task}
+
+
+
+\begin{definition}
+Циклом длины  $l$ называется перестановка $\alpha\in S_n$ элемантов $i_1$, \ldots, $i_l$, такая что $\alpha(i_j)=\alpha(i_{j+1})$ (сложение происходит по модулю  $l$), а на всех остальных элементах тождественна. Для упрощения записи $\alpha=(i_1, \ldots,i_l)$.
+\end{definition}
+
+\begin{definition}
+Циклы называются независимыми, если их элементы не пересекаются. Если цклы $\alpha$ и $\beta$ независимы, то $\alpha\beta=\beta\alpha$.
+\end{definition}
+
+\begin{theorem}
+Любую перестановку можно представить в виде произведения независимых циклов.
+\end{theorem}
+\begin{task}
+Существует ли перестановка, дающая при возведении в квадрат транспозицию (перестаноку, которая меняет два элемента местами, а все остальные оставляет неподвижными)?
+\end{task}
+
+\begin{task}
+На полковом плацу нарисован прямоугольник $1\times7$, разбитый на 7 квадратов. В квадратах написаны числа от 1 до 7, но не обязательно по порядку. Старшина выстроил семерых солдат в шеренгу так, что каждый стоит в своем квадрате. По команде "Переставься!" каждый солдат переходит из своего квадрата в $k$-ый слева, где $k$-число, написанное в квадрате, где стоит солдат. Докажите, что не больше, чем через 12 команд начальное расположение солдат повторится.
+\end{task}
+
+\begin{task}
+В некотором городе разрешаются только парные обмены квартир. Докажите, что любой сложный обмен квартирами можно осуществить за два дня.
+\end{task}
+
+\begin{task}
+В городе Урюпинске разрешены только тройные обмены квартир. Может ли в результате нескольких обменов получиться так, что семья Ивановых поменяется квартирами с семьёй Петровых, а все остальные жители останутся при своих квартирах?
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{exercise}
+\end{exercise}
+\begin{example}
+\end{example}
+\begin{assertion}
+\end{assertion}

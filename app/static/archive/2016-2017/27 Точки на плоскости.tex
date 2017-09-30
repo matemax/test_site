@@ -1,0 +1,80 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Наборы точек на плоскости
+}{1 апреля 2017 9-11 класс}
+
+\begin{task}[Теорема Сильвестра-Галлаи]
+\sub Пусть даны $n$ точек на плоскости, не все точки лежат на одной прямой. Тогда найдётся прямая,
+которая пройдёт ровно через две точки.\\
+\sub Сформулируйте обобщение  данной теоремы на случай трёхмерного пространства,  верно ли оно?
+\end{task}
+
+\begin{task}
+Предположим, что отмечены $n$ точек на плоскости,
+не лежащих на одной прямой. Тогда найдется по меньшей мере $n$
+прямых, соединяющих пары отмеченных точек.
+\end{task}
+
+\begin{exercise}
+На плоскости отмечено  $n$ не параллельных прямых, не все из которых пересекаются в одной точке. Тогда существуют минимум $n$ точек пересечения. 
+\end{exercise}
+
+\begin{definition}
+\emph{Числом скрещиваний} $cr(\overline{G})$ изображения $\overline{G}$ графа на плоскости называется число пар таких пересекающихся ребер, которые не
+имеют общих вершин.\\
+\emph{Числом скрещиваний} $cr(G)$ графа $G$ называется минимальное
+число скрещиваний среди всех изображений графа на плоскости.
+\end{definition}
+
+
+\begin{task}
+Докажите, что для любого графа $G$ с $n$ вершинами и $e$ рёбрами выполнено неравенство $cr(G) > e - 3n$.
+\end{task}
+
+
+\begin{task}
+Дан граф $G$ с $n$ вершинами и $e$ рёбрами. Пусть $T'$ его реализация на плоскости с $cr(T)=ch(G)$. Рассмотрим вероятностный граф $G'$ который получается из $G$ выбором каждой вершины с вероятностью $p$ и соответствующая ему реализация $T'$, полученный из $T$.\\ 
+\sub $E(cr(T'))=p^4cr(G)$.\\
+\sub Дан граф $G$ с $n$ вершинами и $e$ рёбрами. Если $e > 4n$, то $cr(G) > \dfrac{e^3}{64n^2}$.\\
+\sub Получите оценку на число скрещиваний для полного графа.
+\end{task}
+
+\begin{definition}
+Точки на плоскости, некоторые из которых соединены отрезками называются  \emph{геометрическим графом}.
+\end{definition}
+\begin{task}
+Пусть $P$ множество точек на плоскости из $n$ штук и $G$ геометрический граф на этих точках. Докажите, что если любые два ребра пересекаются и никакие два  ребра не совпадают по отрезку, то в $G$ не больше $n$ рёбер.
+\end{task}
+\begin{task}
+Let $L$ be a set of $n$ non-concurrent lines in the real affine plane. Assume
+that no two lines in $L$ are parallel. Then $L$ determines at least $n$ extreme intersection points.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

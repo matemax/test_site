@@ -1,0 +1,101 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{ Дискретная производная
+}{27 февраля 2016 9-11 класс}
+\begin{definition}Пусть задана последовательность чисел $a_0,a_1,\ldots,a_n,\ldots$. \emph{Дискретной производной} данной последовательности называется последовательность $b_0,b_1,\ldots,b_n,\ldots$ такая, что $b_i=a_{i+1}-a_i$. Если последовательность задана некоторой функцией $a_i=f(i)$,  то её дискретную производную будем обозначать $\bigtriangleup f(n)$.
+\end{definition}
+
+\begin{exercise}
+Вычислите дискретную производную от следующих последовательностей: \sub $f(n)=1$, \sub $f(n) = n+3$, \sub $f(n)= n^k$,\\ \sub $f(n) =\dfrac{n(n-1)\ldots(n-k+1)}{k!}$. 
+\end{exercise}
+\begin{exercise}
+Что можно сказать о последовательностях, у которых совпадают дискретные производные?
+\end{exercise}
+
+\begin{task}
+Найдите все такие функции $f:\mathbb{N}\to\mathbb{R}$, что $f(n)= a\cdot \bigtriangleup f(n)$, где $a$ -- некоторое фиксированное число. 
+\end{task}
+
+
+\begin{definition}
+Мы можем брать производную от последовательности несколько раз, $k$-ой  дискретной производной функции $f$ называется последовательность $\bigtriangleup^k f(n)=(\bigtriangleup^k f)(n+1) - (\bigtriangleup^k f)(n)$. Определение индуктивное. У нас определена первая производная и  потом мы поочерёдно определяем следующие.
+\end{definition}
+
+
+
+
+\begin{task}
+Докажите, что если $f(n)$ -- многочлен, то существует такое $k$, что $\bigtriangleup^k f(n)=0$.  Докажите обратное утверждение.
+\end{task}
+
+
+\begin{task}
+Найдите явную формулу для $\bigtriangleup^k f(n)$.
+\end{task}
+
+\begin{task}
+Найдите $n$-ую дискретную производную многочлена $n$-ой степени. Из этого знания найдите 
+$$
+\sum\limits_{k=0}^n(-1)^kk^nC_n^k.
+$$
+\end{task}
+
+
+\begin{task}
+Докажите, что если $m$ и $n$~--- целые числа, $1<m<n$, то 
+$$
+\sum\limits_{k=0}^n(-1)^kk^mC_n^k=0.
+$$
+(Подсказка: постройте интерполяционный многочлен для многочлена $x^m$ по $n$ точкам.)
+\end{task}
+
+\begin{task}
+Найдите все функции из \sub $\mathbb{Z}\to\mathbb{R}$,\sub $\mathbb{R}\to\mathbb{R}$ со свойством $p(x+1)=p(x)+2x+1$.
+\end{task}
+
+
+
+
+%\begin{task}Многочлен $P(x)$ с целыми коэффициентами таков, что при любых натуральных $m$ и $n$ число $P(m + n)$ делится хотя бы на одно из чисел: $m$ или $n$. Докажите, что $P(x)$ – нулевой многочлен.
+%\end{task}
+
+\begin{task}
+Дана функция $f(x)$, значения которой при любом целом $x$ целые. Известно, что для любого простого $p$ существует многочлен $Q_p(x)$ степени не больше  2013 с целыми коэффициентами  такой, что  $f(n)-Q_p(n)$ делится на $p$.
+
+Верно ли, что существует многочлен $g(n)$ с вещественными коэффициентами такой, что  $g(n)=f(n)$ для любого целого $n$?
+\end{task}
+
+
+
+\begin{task}
+\sub Докажите, что функция $f(n)=1^{20}+2^{20}+\ldots+n^{20}$ является многочленом  от $n$ с рациональными коэффициентами. \sub Найдите значение $f(-\dfrac{1}{2})$.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

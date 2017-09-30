@@ -1,0 +1,96 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Многочлены, интерполяция
+}{11 октября 2014 9-11 класс}
+
+
+\begin{task}
+Существует ли многочлен $f(x)\in K[x]$, где $K$~--- поле, который в различных  точках $x_0,\ldots, x_n$ принимает данные значения $y_0=f(x_0),\ldots,y_n=f(x_n)$? Единственный ли этот многочлен?
+\end{task}
+
+\begin{task}Пусть $a,b$ взаимно простые числа.
+\sub Докажите, что существует $n$ такое, что $n \mod_a 1$, $n \mod_b 0$.
+
+\sub Докажите, что для любого $0\leqslant r_1 <a$ существует $n$ такое, что $n \mod_a r_1$, $n \mod_b 0$.
+
+% помог бы еще пункт про остатки 0 и r_2.
+
+\sub Prove that for every  integer numbers $0\leqslant r_1 <a, 0\leqslant r_2 <b,$ there exist $n$ such that $n  \mod_a r_1$, $n  \mod_b r_2$.
+
+\sub Докажите, что число $n$ из предыдущей задачи единственно по модулю $ab$.
+\end{task}
+
+\begin{task}[Китайская теорема об остатках] Пусть $m_1, m_2, \dots, m_k$ попарно взаимно простые числа, $m=m_1m_2\cdot \dots \cdot m_k$. Тогда для любых остатков $r_i$, $0 \leqslant r_i <m_i$ , существует единственный остаток $r$, $0\leqslant r <m$ такой, что $r \mod_{m_i} r_i$.
+\end{task}
+
+
+\begin{task}\sub Постройте многочлен $P$, который в точках $x_1, \dots, x_n$ равен нулю, а в остальных точках отличен от нуля.
+
+%\sub Постройте многочлен $P$ второй степени, который в точке $x_0$ принимает значение 1, а в точках  $x_1$ и $x_2$ равен 0.
+%
+\sub Постройте многочлен $P$ степени $n$, который в точке $x_0$ принимает значение 1, а в точках $x_1, x_2, \dots, x_n$ равен нулю.
+
+\sub Постройте многочлен $P$ степени $n$, который в точке $x_0$ принимает значение $y_0$, а в точках $x_1, x_2, \dots, x_n$ равен нулю.
+
+\sub Постройте многочлен $P$ степени $n$, который в точке $x_1$ принимает значение $y_1$, а во всех точках $x_0, x_2,  \dots, x_n$ равен нулю.
+
+\sub Постройте многочлен $P$ степени \emph{не выше} $n$, который в точке $x_0$ принимает значение $y_0$, в точке $x_1$ принимает значение $y_1$, а в точках $x_2,  \dots, x_n$ равен нулю.
+
+\sub Постройте многочлен $P$ степени \emph{не выше} $n$ такой, что $P(x_i)=y_i$, где $i=0,1,\dots,n$
+\end{task}
+
+
+\begin{task}
+Опишите все многочлены, которые в точках $x_0, x_1, \dots, x_n$ принимают значения $y_0, y_1, \dots, y_n$.
+\end{task}
+
+\begin{definition} Интерполяционный многочлен в виде
+{\small \begin{align}\label{eq_Newton}
+P(x)=a_0+a_1(x-x_0)+a_2(x-x_0)(x-x_1)+\ldots+a_n(x-x_0)(x-x_1)\cdot\ldots\cdot(x-x_{n-1})
+\end{align}}
+называется \emph{интерполяционным многочленом Ньютона}.
+\end{definition}
+\begin{task} Докажите, что для любых точек $x_0, x_1, \ldots, x_n$ и значений $y_0, y_1, \ldots, y_n$ существуют числа $a_i$ такие, что многочлен \eqref{eq_Newton} в точках $x_0, x_1, \dots, x_n$ принимает значения $y_0, y_1, \dots, y_n$.
+\end{task}
+
+
+\begin{task}
+Квадратный трехчлен $P(x)$ принимает целые значения при всех
+целых~$x$. Докажите, что все коэффициенты многочлена $2P(x)$~--- целые.
+\end{task}
+
+\begin{task}
+Многочлен $f(x)$ имеет целые коэффициенты, причём $f(0)$ и $f(1)$~--- чётные. Докажите, что для любого целого числа $n$ значение $f(n)$~--- чётное число.
+\end{task}
+
+
+\begin{task}
+Докажите, что если многочлен $n$-ой степени в $n+1$ последовательном целомчисле принимает целые значения, то он принимает целые значения во всех целых числах.
+\end{task}
+
+\begin{task}
+Многочлен $P(x)$ степени $n$  удовлетворяет равенствам:\sub $P(k)=1$; \sub $P(k)=(-1)^kk$; \sub $P(k)=\frac{k}{k+1}$, где $k=0,1,\ldots,n$. Найти $P(n+1)$.
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}

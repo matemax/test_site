@@ -1,0 +1,77 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Линейность 
+}{08 ноября 2016 9-11 класс}
+
+
+\begin{definition}
+функция $f: \mathbb{R}^2\to \mathbb{R}$ называется \emph{аффинной}, если для любой точки $C$ делющую прямую $AB$ в отношении $\dfrac{\overline{AC}}{\overline{CB}} =\dfrac{a}{b}$ выполнено равенство $f(C)= \dfrac{a}{a+b}f(A)+\dfrac{b}{a+b}f(B)$.
+\end{definition}
+
+\begin{definition} Назовем \emph{аффинной} функцию, которая, будучи ограниченной на любую прямую, становится линейной. То есть при введении координат на этой прямой можно записать как $kx+b$. 
+\end{definition}
+
+\begin{task}
+Докажите, что данные определения эквивалентны.
+\end{task}
+
+\begin{definition}
+функция $f: \mathbb{R}^2\to \mathbb{R}$ называется \emph{линейной}, если существуют такие $a,b$ и $c$, что для любой точки $(x,y)$ $f((x,y))=ax+by+c$.
+\end{definition}
+
+\begin{task} Докажите, что эти функции аффинны: $f(X)=\overrightarrow{S}_{AXB}$; $\displaystyle f(X)=AX^2-BX^2$. 
+\end{task}
+
+\begin{task} Докажите, что если $h, g$ --- аффинные функции, то функция $\lambda h+\mu g$ также аффинна.
+\end{task}
+
+\begin{task} Докажите аффинность функций: $\displaystyle X\!\mapsto\!\sum_{i=1}^{n} \lambda_i\overrightarrow{S}_{A_iXB_i}$; $\displaystyle X\!\mapsto\!\sum_{i=1}^{n} k_iC_iX^2$ ($\sum k_i\!=\!0)$. 
+\end{task}
+
+\begin{task} Докажите, что $\{X: f(X)=d\}$ есть либо $\emptyset$, либо прямая, либо вся плоскость.
+\end{task}
+
+\begin{task} Докажите, что аффинная функция и линейная- одно и тоже.\end{task}
+\bigskip 
+
+\textbf{Метод решения задач. } {\small \begin{itemize} \item Если в задаче требуется доказать, что какие-то три (или более) точки (например, $A,B,C$) лежат на одной прямой, можно попытаться придумать функцию $f$, так чтобы, во-первых, уравнение $f(X)=0$ задавало прямую на плоскости, а во-вторых, этому уравнению удовлетворяли все три точки: $f(A)=f(B)=f(C)=0$. \item Если в задаче требуется доказать, что какие-то три прямые (например, $a,b,c$) пересекаются в одной точке, можно попытаться придумать функции $f_a$, $f_b$, $f_c$, задающие эти прямые (т.е. уравнение $f_{\ell}(X)=0$ равносильно $X\in\ell$ для $\ell\in\{a,b,c\}$), так чтобы одна из этих функций выражалась линейно через две оставшиеся (т.е. $f_c=\alpha f_a+\beta f_b$. Тогда точка пересечения $a$ и $b$ будет принадлежать $c$. \end{itemize} } 
+
+\begin{task} Дан четырехугольник. В одной паре его противоположных углов провели внешние биссектрисы -- получили точку их пересечения. Потом в другой паре -- получили вторую точку. Потом противоположные стороны продлили до пересечения, получили два угла -- по ним аналогично построили третью точку. Докажите, что эти три точки лежат на одной прямой.
+\end{task}
+
+
+
+\begin{task} Дан правильный треугольник $ABC$ и произвольная точка $D$. Точки $I_A$, $I_B$ и $I_C$ --- центры окружностей, вписанных в треугольники $BCD$, $CAD$ и $ABD$ соответственно. Докажите, что перпендикуляры, опущенные из вершин $A$, $B$ и $C$ на прямые соответственно $I_BI_C$, $I_AI_C$ и $I_AI_B$, пересекаются в одной точке.
+\end{task}
+
+\begin{task} Докажите, что если в тетраэдре $ABCD$ оказалось, что $AB\bot CD$ и $AC\bot BD$, то и $AD\bot BC$. 
+\end{task}
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

@@ -1,0 +1,92 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет, 13-02.}{Когда ладьи...
+}{25 октября 2014 9-11 класс}
+
+\begin{definition}
+Рассмотрим бесконечную клетчатую плоскость. \emph{Доской} называется произвольный конечный набор клеток на этой плоскости. \emph{Ладья}~--- фигура, которая держит под боем все кетки плоскости, находящиеся с ней в одной строке или одном столбце.
+\end{definition}
+
+\begin{definition}
+Зафиксируем произвольную доску $B$, обозначим через $r_n(B)$~--- количество способов поставить $n$ ладей на доску $B$.
+\end{definition}
+
+\begin{exercise}
+Пусть $B$~--- доска.\sub Докажите, что начиная с некоторого $N$ при всех $n>N$ $r_n(B)=0$. \sub Найдите $r_1(B)$.
+\end{exercise}
+
+\begin{exercise}
+Пусть $B$~--- квадратная доска $n\times n$. Найдите $r_n(B)$.
+\end{exercise}
+\begin{definition}
+Пусть $c$~--- клетка доски $B$. \emph{Крестом$(c)$} называется множество клеток $B$, лежащих в ней в одной строке или столбце.
+\end{definition}
+
+
+
+\begin{task}
+Докажите следующую формулу:
+$$
+r_k(B)=r_k(B\backslash c)+r_{k-1}(B\backslash\text{Крест}(c)).
+$$
+Множество $A\backslash B$~--- все элементы $A$, которые не входят в $B$.
+\end{task}
+
+\begin{definition}
+Каждой доске $B$ соответствует набор чисел  $\{r_1(B),r_2(B),\ldots,$ $r_n(B),\ldots\}$. Две доски $A$ и $B$ называются эквивалентными, если  соответствующие им наборы чисел совпадают.
+\end{definition}
+
+\begin{task}
+Найдите наименьшее количество  клеток $n$ такое, что при нём существует две связные эквивалентные  доски $A$ и $B$ такие, что одна не получется из другой движением.
+\end{task}
+\begin{task}
+Докажите, что если доски $A$ и $B$ получаются друг из друга перестановкой строк и столбцов, то они эквивалентны. 
+\end{task}
+
+\begin{task}
+Рассмотрим две доски: квадратную диаграмму Юнга из $n$ столбцов и диаграмму Юнга, у которойстроки имеют длину $1,3,5,\ldots, 2n-1$. Докажите, что эти доски эквивалентны.
+\end{task}
+
+\begin{task}
+Какое максимальное количество ладей можно поставить на квадратную доску $9\times 9$, чтобы каждая била не более двух других.
+\end{task}
+
+
+\begin{task}
+В клетках шахматной доски написаны различные числа. На ней поставили 8 ладей, не бьющих друг друга так, что сумма чисел , на которых стоят ладьи максимальна. Докажите, что найдётся ладья, которая стоит на максимальном числе в своём столбце.
+\end{task}
+
+
+\begin{task}
+На каждом поле таблицы $n\times n$ стоит буква. Известно, что все строки различны. Доказать, что существует столбец, после удаления которого все строки останутся различными.
+\end{task}
+
+
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
