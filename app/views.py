@@ -38,3 +38,8 @@ def about():
 @app.route('/contacts')
 def contacts():
     return render_template("contacts.html")
+
+
+@app.route('/news')
+def news():
+    return render_template("news.html")
