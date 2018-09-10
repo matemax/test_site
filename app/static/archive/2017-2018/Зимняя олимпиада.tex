@@ -1,0 +1,148 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{cells}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26.5cm
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+  \egroup
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{Зимняя письменная учебная олимпиада.
+}{16 декабря 2017 5 класс}
+
+\begin{task}
+Мышонок ест куб сыра $3\times3\times3$, съедая за один присест один кубик $1\times1\times1$. После того, как кубик съеден, мышонок переходит к соседнему с ним по грани кубику. Может ли этот зверь съесть весь сыр без центрального кубика?
+\end{task}
+
+
+\begin{task}
+Учитель написал на листке бумаги число 20. Тридцать три ученика передают листок друг другу, и каждый прибавляет к числу или отнимает от него единицу – как хочет. Может ли в результате получиться число 10?
+\end{task}
+
+\begin{task}
+Докажите, что среди 1200 школьников найдутся минимум трое с однинаковым днём рождением?
+\end{task}
+\begin{task}
+Хромой король может ходить на любую соседнюю по стороне или углу клетку доски, кроме верхней и нижней (не более 6 возможных ходов с каждой клетки). Может ли хромой король обойти все клетки доски $9\times9$, побывав на каждой клетке по одному разу?
+\end{task}
+
+\begin{task}
+В ковре размером $4\times4$ метра моль проела 15 дырок. Докажите, что из этого ковра можно вырезать коврик размера $1\times1$ метр, в котором нет ни одной дырки.
+\end{task}
+
+\begin{task}
+Обойдите все клетки доски  $8\times8$  конём, побывав на каждой клетке ровно один раз и вернитесь в исходную клетку.
+\end{task}
+
+\begin{task}
+Город называется большим северным, если по отношению к любому другому
+городу он либо больше, либо севернее. Аналогично определяется маленький
+южный город. В~Тридевятом царстве все города, кроме Задворска, являются и
+большими северными и малыми южными одновременно. Докажите, что
+Задворск~-— тоже большой северный и при этом также малый южный город.
+\end{task}
+
+
+\begin{task}
+Ксения Сергеевна сложила в стопку несколько треугольников, в углах каждого из которых написаны числа 1, 2 и 3. Может ли сумма чисел в каждом углу стопки оказаться равной 55?
+\end{task}
+
+
+\begin{task}
+Трое пятиклассников играют в «Мега-банальности». Каждый записывает по сто слов. После этого записи сравнивают. Если слово встретилось у всех троих, за него дают 0 очков, если у двоих – каждый получает 1 очко, если у одного – он получает 4 очка. Может ли в результате один набрать 161, другой – 180, а третий – 286 очков?
+\end{task}
+
+\begin{task}
+Доска размером $4\times 4$  покрыта 13 доминошками $2\times1$. Докажите, что можно убрать одну доминошек  так, что оставшиеся будут по-прежнему покрывать всю доску.
+\end{task}
+
+\begin{task}
+На шахматной доске $8\times 8$ стоит 50 пешек. Разрешается выбрать квадрат $2\times2$, в котором стоит единственная пешка, и снять ее. Докажите, что не удастся снять все пешки.
+\end{task}
+
+\vspace*{\fill}
+{\bf Олимпиада письменная, первое занятие в феврале. Если по каким-то причинам вас не будет, то можно прислать на почту, адрес на сайте.
+ Просьба все решения оформлять в отдельной тоненькой тетрадке  более или менее аккуратно,  пояcнять все переходы максимально подробно. }
+
+\centerline{ Сайт кружка  \url{http://matemax.pythonanywhere.com},}
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
+
+\begin{task}
+Можно ли расставить на шахматной доске 17 королей так, чтобы они не били друг друга?\end{task}
+
+\begin{task}
+Семь шестиклассников решили вместе 100 задач, причем каждый решил разное
+количество задач. Докажите, что какие-то три школьника решили вместе не менее
+50 задач.
+\end{task}
+\begin{task}
+На клетчатой плоскости отмечено 100 клеток. Докажите, что можно отметить среди
+них 25 клеток так, чтобы они не имели общих точек.
+\end{task}
+\begin{task}
+В каждой клетке квадрата $9 \times 9$ стоит конь. По команде каждый конь делает один
+ход. Докажите, что по крайней мере одна клетка после этого окажется свободной.
+\end{task}
+\begin{task}
+Найдите суммму всех чётных чисел от 2 до 146.
+\end{task}
+
+
+
+\begin{task}
+Трое пятиклассников играют в «Мега-банальности». Каждый записывает по сто слов. После этого записи сравнивают. Если слово встретилось у всех троих, за него дают 0 очков, если у двоих – каждый получает 1 очко, если у одного – он получает 4 очка. Может ли в результате один набрать 161, другой – 180, а третий – 286 очков?
+\end{task}
+
+\begin{task}
+По ребрам куба ползает муравей, нигде не поворачивая обратно. Может ли он в одной из вершин побывать 15 раз, а в остальных~--- по 10 раз.
+\end{task}

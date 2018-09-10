@@ -1,0 +1,132 @@
+\RequirePackage[russian]{babel}
+\RequirePackage{cmap}
+\RequirePackage{amsmath,amsfonts,amssymb,amsthm,multicol}
+\RequirePackage{sheet-helper} %all dragons live there
+
+%%% Package Options
+\newif\ifsheet
+\newif\ifwatermarks
+\DeclareOption{sheet}{
+    \PassOptionsToPackage{bookmarks=true}{hyperref}
+    \sheettrue
+}
+\DeclareOption{tsheet}{
+    \PassOptionsToPackage{bookmarks=true}{hyperref}
+    \sheetfalse
+}
+\DeclareOption{book}{
+    \sheetfalse
+}
+\DeclareOption{draftmarks}{
+	\watermarkstrue
+}
+\ExecuteOptions{sheet}
+\ProcessOptions\relax
+
+\ifwatermarks
+	\RequirePackage{background}
+	\SetBgColor{lightgray}
+\fi
+%%% End Package Options
+
+\RequirePackage{hyperref}
+
+
+
+%%% Formatting etc
+%%% End Formatting etc
+
+
+
+%%% Commands for tasks, subtasks etc
+
+%
+\newcommand{\lcSheetName}{}
+\newcommand{\lcSheetPartName}{Часть}
+\newcommand{\lcTaskName}{}
+\newcommand{\lcExercName}{Упражнение}
+\newcommand{\lcAssertionName}{Утверждение}
+\newcommand{\lcExampleName}{Пример}
+\newcommand{\lcDefName}{Определение}
+\newcommand{\lcConvName}{Соглашение}
+\newcommand{\lcRemName}{Замечание}
+\newcommand{\lcConjName}{Гипотеза}
+\newcommand{\lcFactName}{Факт}
+\newcommand{\lcEmptName}{}
+\newcommand{\lcAxiomName}{Аксиома}
+\newcommand{\lcConsicName}{Следствие}
+\newcommand{\lcQuestName}{}
+
+
+%usage:
+%       \newsheetblock[counter]{env_name}{printed_name}{postfix}
+%   or
+%       \newsheetblock{env_name}{printed_name}
+%usage of the result:
+%   \begin{env_name}[optional title]
+%   \end{env_name}
+% (and a special bonus for numbered version:
+%   \begin{env_nameX}[optional title]{number}
+%   \end{env_name}
+% )
+\newcounter{task}[sheet]
+\newsheetblock[task]{task}\lcTaskName{}
+\newsheetblock[task]{task*}\lcTaskName{*}
+\newsheetblock[task]{task**}\lcTaskName{**}
+\newcounter{definition}[sheet]
+\newsheetblock[definition]{definition}{\defmark\lcDefName}{}
+\newenvironment{something}[1][]{\z@beginsheetblock#1}{\z@endblock}
+\newenvironment{undefinition}{\z@beginsheetblock\defmark}{\z@endblock}
+\newcounter{exercise}[sheet]
+\newsheetblock[exercise]{exercise}{\defmark\lcExercName}{}
+\newcounter{example}[sheet]
+\newsheetblock[example]{example}{\defmark\lcExampleName}{}
+\newcounter{assertion}[sheet]
+\newsheetblock[assertion]{assertion}{\defmark\lcAssertionName}{}
+\newsheetblock{axiom}{\lcAxiomName}
+\newsheetblock{empt}{\lcEmptName}
+\newcounter{question}[sheet]
+\newsheetblock[question]{question}{\defmark\lcQuestName}{}
+\newsheetblock{conv}{\lcConvName}
+\newsheetblock{consic}{\lcConsicName}
+\newsheetblock{fact}{\lcFactName}
+\newsheetblock{remark}{\lcRemName}
+\newsheetblock{conj}{\lcConjName}
+
+\newenvironment{tcomment}{\z@beginblock}{\z@endblock}
+\newcommand{\icomment}[1]{{\small #1}}
+
+%usage: \newsubblock[counter]{cmd_name}{postfix}
+%usage of the result:
+%   \cmd_name[optional title]
+\newcounter{subtask}[block]
+\renewcommand{\thesubtask}{\ralph{subtask}}
+\newsubblock[subtask]{sub}{)}
+\newsubblock[subtask]{subst}{*)}
+\newsubblock[subtask]{subsst}{**)}
+
+%btw, we also have \sheet
+%usage: \sheet{#number}{title}{date}
+%%% End Commands for tasks, subtasks etc
+
+
+
+%%% Shorthands
+\newcommand{\Map}{\operatorname{Map}}
+\def\GCD{\operatorname{\text{НОД}}}
+\def\LCM{\operatorname{\text{НОК}}}
+\def\ord{\operatorname{ord}}
+\def\di{\mathrel{\vdots}}
+\def\div{\mathrel|}
+\def\eps{\varepsilon}
+\def\kratno{\mathrel{\smash{\lower.5ex\vbox{\baselineskip=1ex
+\lineskiplimit=0pt \hbox{.} \hbox{.} \hbox{.}}}}}
+
+\newcommand{\NN}{\mathbb N}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\FF}{\mathbb F}
+\renewcommand{\SS}{\mathfrak S} % for permutations
+
+\newcommand{\set}[1]{\{#1\}} 

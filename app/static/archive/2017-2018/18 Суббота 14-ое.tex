@@ -1,0 +1,129 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{cells}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+
+\egroup
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{Суббота 14-ое}{14 апреля 2018 5 класс}
+
+\begin{task}
+Задумайте любое число, не равное нулю. Прибавьте к нему 3. Результат умножьте на 4, потом прибавьте задуманное число, умножьте на 2, вычтите 24 и разделите на задуманное число. У Вас получилось 10. В чём секрет?
+\end{task}
+
+\begin{task}
+В распоряжении капитана имеется 10 пиратов.\sub Сколькими  способами он может выбрать из них юнгу, кока и боцмана? \sub Сколькими способами он может выбрать трёх пиратов в тайную вылазку?
+\end{task}
+
+\begin{task}
+Сколькими способами можно прочитать слово <<ДРАКОН>> на картинке ниже?
+\end{task}
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.5]{dragon.png}
+\end{wrapfigure}
+\begin{task}
+И сказал Кащей Ивану Царевичу: <<Жить тебе до завтрашнего утра. Утром явишься пред мои очи, задумаю я натуральные числа $x$, $y$ и $z$. Назовёшь ты мне три натуральных числа $a$, $b$ и $c$. Выслушаю я тебя и скажу, чему равно $ax + by + cz$. У тебя есть две попытки. Не отгадаешь, какие числа я задумал~--- голову с плеч долой!>> Запечалился Иван Царевич и пошёл думу думать. Может ли он в живых остаться?
+\end{task}
+
+
+\begin{task}
+Найдите сумму всех натуральных чисел от 1 до $n$.
+\end{task}
+
+\begin{task}
+Каким числом способов можно расставить 8 ладей на доске $8\times 8$ так, чтобы они не били друг друга?
+\end{task}
+
+
+\begin{task}На сторонах шестиугольника было записано шесть чисел, а в каждой вершине — число, равное сумме двух чисел на смежных с ней сторонах. Затем все числа на сторонах и одно число в вершине стерли. Можно ли восстановить число, стоявшее в вершине?
+\end{task}
+
+
+\begin{task}
+Все цифры шестизначного числа A – различны и расположены в порядке возрастания. Чему может равняться сумма цифр числа 9А?
+\end{task}
+\begin{task}
+На шахматной доске стоят 10 шахматных фигур – слоны и ладьи – не бьющие друг друга. Какое наименьшее количество слонов может быть среди них?
+\end{task}
+
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.1]{dragon.jpg}
+\end{wrapfigure}
+\begin{task}У профессора Чайникова на полке стоят книги, все авторства разных писателей. Профессор посчитал, что есть ровно 225 способов расставить книги на полке так, чтобы Чехов и Тургенев оказались рядом. Может ли это быть правдой?
+\end{task}
+\vspace*{\fill}
+28 апреля занятия не будет. 5 и 12 мая занятия будут (ориентировочно)
+Сайт кружка  \url{http://matemax.pythonanywhere.com} 
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
+
+\begin{task}
+Два пешехода вышли на рассвете. Каждый шел с постоянной скоростью. Один шел из A в B, другой - из B в A. Они встретились в полдень и, не прекращая движения, пришли: один в B в 4 часа вечера, а другой - в A в 9 часов вечера. В котором часу в тот день был рассвет?
+\end{task}
+
+
+
+\begin{task}
+И сказал Кащей Ивану Царевичу: <<Жить тебе до завтрашнего утра. Утром явишься пред мои очи, задумаю я натуральные числа $x$, $y$ и $z$. Назовёшь ты мне три натуральных числа $a$, $b$ и $с$. Выслушаю я тебя и скажу, чему равно $ax + by + cz$. У тебя есть две попытки. Не отгадаешь, какие числа я задумал~--- голову с плеч долой!>> Запечалился Иван Царевич и пошёл думу думать. Может ли он в живых остаться?
+\end{task}
+\begin{task}
+У каждого из нескольких драконов было некоторое количество украденных принцесс. В Юрьев день каждая принцесса получила право поменять хозяина. В итоге оказалось, что у каждого дракона принцесс стало либо вдвое больше, либо вдвое меньше. Могло ли общее число принцесс равняться 2008?
+\end{task}
+\begin{task}
+Докажите, что в записи числа $2^{300}$ \sub не меньше 90 цифр; \sub не больше 100 цифр.
+\end{task}

@@ -1,0 +1,123 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{cells}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+
+\egroup
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{ЙО-ХО-ХО И БУТЫЛКА КВАСА}{5 мая 2018 5 класс}
+
+
+\begin{task}
+У Вождя племени есть 10 различных бусин. Сколько разных  ритуальных браслетов он сможет из них составить?
+\end{task}
+
+\begin{task}
+Сколько различных слов можно получить, переставляя буквы слова \sub <<ПИРАТ>>; \sub <<АБОРДАЖ>>; \sub <<ЙОХОХОИБУТЫЛКАКВАСА>> (\emph{словом называется произвольная последовательность букв})? 
+\end{task}
+
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.55]{rask5.jpg}
+\end{wrapfigure}
+\begin{task}
+На доске вначале выписаны два числа: 3 и 6. За один ход
+разрешается увеличить любое число на доске на сумму цифр любого из
+выписанных (в том числе на сумму цифр его самого). Можно ли
+добиться того, чтобы каждое число превратилось в 2010?
+\end{task}
+
+\begin{task}
+Как раскрасить лист клетчатой бумаги в 5 цветов так, чтобы внутри любой фигуры типа А (см. рисунок) клетки были окрашены во все 5 цветов, а внутри  любой фигуры типа В – не все?
+\end{task}
+
+\begin{task}
+На торжественный банкет в честь хорошей погоды и попутного ветра пришло 100 пиратов. Назовём двух пиратов \emph{сокружечниками}, если они выпили друг с другом кружку кваса. Докажите, что найдётся два пирата, у которых одинаковое число \emph{сокружечников}.
+\end{task}
+
+
+\begin{task}
+У Талии Маратовны есть 12 различных фруктов, а у Александра Игоревича только 10. Сколькими способами они могут обменять три фрукта одного на три фрукта другого?
+\end{task}
+
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.7]{pirat.jpg}
+\end{wrapfigure}
+\begin{task}
+\sub  Лиса Алиса и кот Базилио делят 6 золотых. Алиса предлагает Базилио положить их по одной в некоторые клетки таблицы $4\times4$. Дальше она оставляет за собой право вычеркнуть две строки и два столбца в этой таблице, а оставшиеся клетки вместе с имеющимися там золотыми оставить Базилио. Докажите, что у лисы Алисы всегда есть возможность присвоить себе все монеты.\\ 
+\sub Придумайте для Базилио такой способ раскладки 7 монет, чтобы после «честного» дележа ему досталась хотя бы одна монета.
+\end{task}
+
+\begin{task}
+Дано шестизначное число  $\overline{abcdef}$, причем $\overline{abc}-\overline{def}$ делится на 7. Докажите, что само число делится на 7.
+\end{task}
+
+\begin{task}
+Когда встречаются двое коротышек из Цветочного города, то один дарит другому василек, а второй в ответ   две ромашки. Могло ли случиться так, что за день каждый из 100 жителей города подарил ровно 10 цветков?
+\end{task}
+
+
+\begin{task}
+Может ли ребус АБВ+ГДЕ=1000  иметь ровно \sub 2000, \sub 791 решений (разные буквы  означают разные цифры)?
+\end{task}
+
+
+\vspace*{\fill}
+Сайт кружка  \url{http://matemax.pythonanywhere.com} 
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
+

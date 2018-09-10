@@ -1,0 +1,135 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{cells}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+
+\egroup
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{ Клетки, числа и комба}{31 марта 2018 5 класс}
+
+\begin{task}
+В пиратской команде 10 человек. \sub Сколько способов выстроить 10 пиратов в ряд? \sub Выбрать капитана и боцмана? \sub Выбрать двух неудачников дравить палубу?
+\end{task}
+
+
+\begin{task}
+На русско-французской встрече не было представителей других стран. Суммарное количество денег у французов оказалось больше суммарного количества
+денег у русских, и суммарное количество денег у женщин оказалось больше суммарного количества денег у мужчин. Обязательно ли на встрече была француженка?
+\end{task}
+
+
+\begin{task}
+Докажите, что число  $\overline{abcdef}-\overline{defabc}$ делится на 27.
+\end{task}
+\begin{task}
+В квадрате $8\times 8$ расставили числа от 1 до 64. Могло ли так получится, что сумма чисел в каждом прямоугольнике $1\times4$ \sub делится на 3, \sub нечётна?
+\end{task}
+
+\begin{task}
+Двенадцать волейбольных команд сыграли турнир в один круг (каждая сыграла с каждой один раз).\\
+\sub Сколько всего было сыграно матчей?\\
+\sub Докажите, что есть команда, которая выиграла не менее 10 матчей (ничей в волейболе не бывает).\\
+\sub Обязательно ли найдутся такие три команды, что каждая из девяти оставшихся команд проиграла хотя бы одной из этих трех?\end{task}
+
+
+\begin{task}
+Цифры $a$ и $b$ таковы, что $a+b$ делится на 7. Докажите, что число $\overline{aba}$  делится на 7.
+\end{task}
+\begin{task}
+Каким числом способов можно поставить на шахматную доску двух королей так, чтобы они не били друг друга?
+\end{task}
+\begin{task}
+Можно ли доску размером $10\times10$   покрыть фигурами вида   \lower.4\cellsize\cells{
+   _
+ _|_|_
+|_|_|_|
+}~?
+\end{task}
+\begin{task}
+Какое наибольшее количество натуральных чисел, не превосходящих 1000, можно выбрать, чтобы ни одно из этих чисел не делилось на разность никаких двух других?
+%Уральский 41 6 class lich 3 
+\end{task}
+
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.15]{man.jpg}
+\end{wrapfigure}
+\begin{task}
+И сказал Кащей Ивану Царевичу: <<Жить тебе до завтрашнего утра. Утром явишься пред мои очи, задумаю я цифры $x$, $y$ и $z$. Назовёшь ты мне три натуральных числа $a$, $b$ и $с$. Выслушаю я тебя и скажу, чему равно $ax + by + cz$. Не отгадаешь, какие числа я задумал~--- голову с плеч долой!>> Запечалился Иван Царевич и пошёл думу думать. Может ли он в живых остаться?
+\end{task}
+
+\vspace*{\fill}
+Сайт кружка  \url{http://matemax.pythonanywhere.com} 
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
+
+\begin{task}
+Два пешехода вышли на рассвете. Каждый шел с постоянной скоростью. Один шел из A в B, другой - из B в A. Они встретились в полдень и, не прекращая движения, пришли: один в B в 4 часа вечера, а другой - в A в 9 часов вечера. В котором часу в тот день был рассвет?
+\end{task}
+
+
+
+\begin{task}
+И сказал Кащей Ивану Царевичу: <<Жить тебе до завтрашнего утра. Утром явишься пред мои очи, задумаю я цифры $x$, $y$ и $z$. Назовёшь ты мне три натуральных числа $a$, $b$ и $с$. Выслушаю я тебя и скажу, чему равно $ax + by + cz$. Не отгадаешь, какие числа я задумал~--- голову с плеч долой!>> Запечалился Иван Царевич и пошёл думу думать. Может ли он в живых остаться?
+\end{task}
+\begin{task}
+У каждого из нескольких драконов было некоторое количество украденных принцесс. В Юрьев день каждая принцесса получила право поменять хозяина. В итоге оказалось, что у каждого дракона принцесс стало либо вдвое больше, либо вдвое меньше. Могло ли общее число принцесс равняться 2008?
+\end{task}
+\begin{task}
+Докажите, что в записи числа $2^{300}$ \sub не меньше 90 цифр; \sub не больше 100 цифр.
+\end{task}
+
+5.	Старательный шестиклассник желает сдать Ирине Александровне сразу 10 задач. Она, естественно, может поставить за каждую задачу либо «плюс», либо «минус». Сколько разных последовательностей плюсов и минусов может появиться в ведомости после их разговора?

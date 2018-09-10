@@ -47,4 +47,4 @@ def make_archive2(years):
         f.write(res)
 
 
-make_archive2("2016-2017")
+make_archive2("2017-2018")

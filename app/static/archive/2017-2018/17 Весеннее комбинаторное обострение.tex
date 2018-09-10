@@ -1,0 +1,145 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{cells}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+
+\egroup
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{Весеннее комбинаторное обострение}{7 апреля 2018 5 класс}
+
+
+\begin{task}
+Алфавит племени Мумба-Юмба состоит из трех букв А, Б, В, а любое слово содержит не более 5 букв.\\
+\sub Словами-«табу», является любая последовательность, состоящая  из неповторяющихся букв. Сколько таких слов в языке племени Мумба-Юмба?\\
+\sub Афоризмом является любая последовательность, состоящая не более, чем из четырех букв. Сколько афоризмов в языке племени?\\
+\sub Архаизмом же является любая последовательность, не содержащая буквы В. Сколько существует архаизмов в языке племени?
+\end{task}
+
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.23]{cowboy.jpg}
+\end{wrapfigure}
+\begin{task}
+Ковбой Джо зашел в бар и попросил у бармена бутылку виски за 3
+доллара, трубку за 6 долларов, три пачки табака и 9 коробок непромокаемых
+спичек, цену которых он не знал. Бармен потребовал 11 долларов 80 центов, на
+что Джо вытащил револьвер. Бармен сосчитал снова и исправил ошибку. Как Джо
+догадался, что бармен пытался его обсчитать?
+\end{task}
+
+\begin{task}
+Найдите двузначное число, обладающее следующим свойством: если зачеркнуть его последнюю цифру, то получится число в 14 раз меньшее.
+\end{task}
+
+\begin{task}
+Коридор длины 6 м покрыт тремя трёхметровыми ковровыми дорожками, причем нигде дорожки не лежат в три слоя. Докажите, что какие-то две из них перекрываются не меньше, чем на 1,5 м.
+\end{task}
+
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.6]{king.png}
+\end{wrapfigure}
+\begin{task}
+<<Хромой король>> стоит в левой нижней клетке доски $5\times 5$ и может передвигаться в трех направлениях, показанных на рисунке.\\	 
+\sub Сколькими способами он может пройти в верхнюю правую клетку?\\
+\sub В заштрихованных клетках~--- лежат мины. Сколько существует путей в верхнюю правую клетку, следуя которым, «хромой король» останется в живых?
+\end{task}
+
+
+
+
+
+
+\begin{task}
+Старательный пятиклассник желает сдать Кристине Артаковне сразу 10 задач. Она, естественно, может поставить за каждую задачу либо «плюс», либо «минус». Сколько разных последовательностей плюсов и минусов может появиться в ведомости после их разговора?
+\end{task}
+
+
+\begin{task}Даны 8 различных натуральных чисел, каждое из которых не больше 15. Доказать, что среди их попарных разностей найдутся три одинаковых.
+\end{task}
+
+\begin{task}
+Какое наибольшее количество коней можно поставить на шахматную доску, чтобы они не били друг друга?
+\end{task}
+
+
+\begin{task}
+В 20 кошельках лежат по 20 монет. Во всех кошельках монеты настоящие, а в одном~--- фальшивые. Все настоящие монеты весят по 50 г, а фальшивые~--- по 49 г. Как за одно взвешивание на электронных весах определить кошелек с фальшивыми монетами?
+\end{task}
+
+
+\begin{task}Разложите гири массами 1, 2,  3, \ldots, 555 на три кучи равной массы.
+\end{task}
+\vspace*{\fill}
+Сайт кружка  \url{http://matemax.pythonanywhere.com} 
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
+
+\begin{task}
+Два пешехода вышли на рассвете. Каждый шел с постоянной скоростью. Один шел из A в B, другой - из B в A. Они встретились в полдень и, не прекращая движения, пришли: один в B в 4 часа вечера, а другой - в A в 9 часов вечера. В котором часу в тот день был рассвет?
+\end{task}
+
+
+
+\begin{task}
+И сказал Кащей Ивану Царевичу: <<Жить тебе до завтрашнего утра. Утром явишься пред мои очи, задумаю я цифры $x$, $y$ и $z$. Назовёшь ты мне три натуральных числа $a$, $b$ и $с$. Выслушаю я тебя и скажу, чему равно $ax + by + cz$. Не отгадаешь, какие числа я задумал~--- голову с плеч долой!>> Запечалился Иван Царевич и пошёл думу думать. Может ли он в живых остаться?
+\end{task}
+\begin{task}
+У каждого из нескольких драконов было некоторое количество украденных принцесс. В Юрьев день каждая принцесса получила право поменять хозяина. В итоге оказалось, что у каждого дракона принцесс стало либо вдвое больше, либо вдвое меньше. Могло ли общее число принцесс равняться 2008?
+\end{task}
+\begin{task}
+Докажите, что в записи числа $2^{300}$ \sub не меньше 90 цифр; \sub не больше 100 цифр.
+\end{task}

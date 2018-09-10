@@ -1,0 +1,141 @@
+\RequirePackage{ifthen}
+\renewcommand{\@oddfoot}{\hfil --- \thepage ---\hfil}
+%%% HERE BE DRAGONS
+
+
+
+%ralph cmd for russian-letters-numbered subtasks
+\def\ralph#1{\@ralph{\@nameuse {c@#1}}}
+\def\@ralph#1{\ifcase #1\or à\or á\or â\or ã\or ä\or å\or æ\or ç\or è\else\@iralph{#1}\fi}
+\def\@iralph#1{\ifcase #1\or\or\or\or\or\or\or\or\or\or ê\or ë\or ì\or í\or î\or ï\or ð\or ñ\or ò\or ó\or ô\or õ\or ö\or ÷\or ø\or ù\or ý\or þ\or ÿ\else\@ctrerr \fi}
+\def\Ralph#1{\@Ralph{\@nameuse {c@#1}}}
+\def\@Ralph#1{\ifcase #1%
+     \or À\or Á\or Â\or Ã\or Ä\or Å\or Æ\or Ç\or È\else\@iRalph{#1}\fi}
+\def\@iRalph#1{\ifcase #1%
+     \or\or\or\or\or\or\or\or\or\or Ê\or Ë\or Ì\or Í\or Î\or Ï\or Ð\or Ñ\or Ò\or Ó\or Ô\or Õ\or Ö\or ×\or Ø\or Ù\or Ý\or Þ\or ß\else\@ctrerr
+     \fi}
+
+%\renewcommand{\small}{%
+%   \@setfontsize\small\@ixpt{11}%
+%%    \setlength\medskipamount{4.5\p@ \@plus 1.5\p@ \@minus 1.5\p@}
+%   \spaceskip.3em plus .15em minus .12em
+%   \abovedisplayskip 8.5\p@ \@plus3\p@ \@minus4\p@
+%   \abovedisplayshortskip \z@ \@plus2\p@
+%   \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+%   \def\@listi{\leftmargin\leftmargini
+%               \topsep 4\p@ \@plus2\p@ \@minus2\p@
+%               \parsep 2\p@ \@plus\p@ \@minus\p@
+%               \itemsep \parsep
+%%%               \itemindent\z@
+%              }%
+%   \belowdisplayskip \abovedisplayskip
+%}
+
+
+
+
+\newcommand\ifnonempty[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
+
+\newcommand\optcomment[2]{#1\ifnonempty{#2}{ (#2)}}
+
+\newcounter{sheet}
+\newcommand{\sheet}[3]{%
+\clearpage%
+\refstepcounter{sheet}% (to reset counters [for tasks and definitions])
+%\def\sheetparttitle{}%
+\phantomsection\addcontentsline{toc}{chapter}{#2}% (for [pdf] toc)
+
+\renewcommand{\@oddhead}{\ifnum\c@page=1%
+{\it #1 \hfill \lcSheetName\ #3}\else%
+\centerline{\textit{#2}}\fi}% (headers with sheet's name)
+%\thispagestyle{empty}
+
+\vspace{-1cm}
+
+%\hrule
+
+\medskip
+\centerline{\large #2}
+\bigskip
+%\vspace{2.3ex plus .2ex}%
+}
+
+%usage: \sheet{affiliation}{title}{number date}
+
+\newcounter{sheetpart}[sheet]
+\newcommand{\sheetpart}[1]{%
+\vspace{3.25ex plus 1ex minus .2ex}%
+\refstepcounter{sheetpart}%
+\phantomsection\addcontentsline{toc}{section}{#1}% (for [pdf] toc)
+\def\sheetparttitle{\lcSheetPartName~\thesheetpart: #1}%
+\leftline{\large\sheetparttitle}
+
+%\vspace{1.5ex plus .2ex}%
+%\smallskip
+}
+
+
+
+\newcounter{block}[sheet]
+\newcommand\z@beginblock{\refstepcounter{block}\par\addpenalty{-50}\addvspace\medskipamount\noindent\ignorespaces}
+\newcommand\z@endblock{\par}
+\newcommand\z@subblock{\noindent}
+
+\newcommand\z@blocktitle[1]{\hbox{\textbf{#1. }}}
+%usage: \z@blocktitle{title}
+\newcommand\z@sheetblockmagic{\ifsheet\else\small\advance\leftskip.08\textwidth\fi}
+\newcommand\z@beginsheetblock{\z@beginblock\z@sheetblockmagic}
+
+\newcommand\z@newsheetblock[2]{%
+\newenvironment{#1}[1][]%
+{\z@beginsheetblock%
+\z@blocktitle{\optcomment{#2}{##1}}}%
+{\z@endblock}%
+}
+\newcommand\z@newsheetblockX[2]{%
+\newenvironment{#1}[2][]%
+{\z@beginsheetblock\z@blocktitle{\optcomment{#2~##2}{##1}}}%
+{\z@endblock}%
+}
+\newcommand\z@newnumberedsheetblock[4]{%
+\newenvironment{#2}[1][]%
+{%
+\z@beginsheetblock%
+\refstepcounter{#1}%
+\z@blocktitle{\optcomment{#3~\csname the#1\endcsname#4}{##1}}%
+}
+{\z@endblock}%
+}
+\newcommand\newsheetblock[3][]{%
+\ifthenelse{\equal{#1}{}}%
+{\z@newsheetblock{#2}{#3}}%
+{\z@newsheetblockX{#2X}{#3}\z@newnumberedsheetblock{#1}{#2}{#3}}%
+}
+%usage:
+%       \newsheetblock[counter]{env_name}{printed_name}{postfix}
+%   or
+%       \newsheetblock{env_name}{printed_name}
+%usage of the result:
+%   \begin{env_name}[optional title]
+%   \end{env_name}
+% (and a special bonus for numbered version:
+%   \begin{env_nameX}[optional title]{number}
+%   \end{env_name}
+% )
+
+\newcommand\newsubblock[3][]{%
+\expandafter\newcommand\csname#2X\endcsname[2][]{\z@subblock\optcomment{##2}{##1}#3~}%
+\expandafter\newcommand\csname #2\endcsname[1][]{\refstepcounter{#1}\z@subblock\optcomment{\csname the#1\endcsname}{##1}#3~}%
+}
+%usage: \newsubblock[counter]{cmd_name}{postfix}
+%usage of the result:
+%   \cmd_name[optional title]
+
+
+
+\newcommand{\defmark}%{\llap{$\triangleright$\kern7pt}} %triangle on the left margin (for definitions and likes)
+
+
+\newcommand\putleft[3]{\vadjust{\vbox to 0pt{\kern#1\hskip#2\noindent%
+{#3}\vss}}}
+\newcommand\putright[3]{\putleft{#1}{#2}{\rightline{#3}}} 

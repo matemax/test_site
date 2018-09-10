@@ -1,0 +1,119 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{cells}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26.5cm
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+  \egroup
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{Весеняя письменная учебная олимпиада.
+}{21 апреля 2017 5 класс}
+
+
+\begin{task}
+В олимпиаде, в которой участвуют 600 школьников, 3 задачи, за каждую задачу можно получить от 0 до 7 баллов. Докажите, что у каких-то двух школьников результаты совпали. 
+\end{task}
+
+\begin{task}
+В Цветочном городе принято на день рождения дарить столько наклеек, сколько лет исполнилось имениннику. Могло ли оказаться, что в 2003 году всего было подарено 2003 наклеек, если всего жителей в этом городе 23, и каждого поздравляют все остальные? 
+\end{task}
+
+
+
+\begin{task}
+Можно ли три грани кубика $4\times4\times4$, имеющие общую вершину, оклеить шестнадцатью полосками $3\times1$?
+\end{task}
+
+
+\begin{task}
+Можно ли без остатка разрезать куб на 20 кубиков? 
+\end{task}
+
+\begin{task}
+В азбуке племени УВЫ всего три буквы: У, В и Ы. Какое наибольшее число различных пятибуквенных имен могут дать детям в этом племени, если в имени обязана быть буква Ы?
+\end{task}
+
+\begin{wrapfigure}{r}{0.0cm}
+\includegraphics[scale=0.07]{malyar.jpg}
+\end{wrapfigure}
+\begin{task}
+Каждая клетка таблицы $2000\times2000$ покрашена в один из 1999 цветов. За ход можно взять строку или столбец и, если там есть две клетки одного цвета, перекрасить эту строку или столбец в этот цвет. Можно ли за несколько ходов покрасить всю таблицу в один цвет?
+\end{task}
+
+\begin{task}
+Можно ли расположить по окружности 15 целых чисел так, чтобы суммы любых четырех чисел, стоящих подряд, равнялась 1 или 3?
+\end{task}
+
+
+
+\begin{task}
+Можно ли  прямоугольниками $4\times 1$ покрыть доску $11\times 11$ так, что только цен-тральное поле останется непокрытым?
+\end{task}
+
+\begin{task}
+Сколько существует таких трёхзначных чисел  $\overline{ABC}$, не делящихся на 10, что как число  $\overline{ABCABC}$, так и число $\overline{CBACBA}$  делятся на 49?
+\end{task}
+
+\begin{task}
+Два пешехода вышли на рассвете. Каждый шел с постоянной скоростью. Один шел из A в B, другой - из B в A. Они встретились в полдень и, не прекращая движения, пришли: один в B в 4 часа вечера, а другой - в A в 9 часов вечера. В котором часу в тот день был рассвет?
+\end{task}
+
+
+\vspace*{\fill}
+{\bf  28 апреля занятия не будет. 5 и 12 мая занятия будут (ориентировочно)}\\
+{ Олимпиада письменная, сдача 5 мая. Если по каким-то причинам вас не будет, то можно прислать на почту, адрес на сайте.
+ Просьба все решения оформлять в отдельной тоненькой тетрадке  более или менее аккуратно,  пояcнять все переходы максимально подробно.}
+
+\centerline{ Сайт кружка  \url{http://matemax.pythonanywhere.com},}
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}

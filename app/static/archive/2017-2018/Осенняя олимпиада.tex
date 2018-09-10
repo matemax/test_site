@@ -1,0 +1,160 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{cells}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\newdimen\cellsize
+\newdimen\lwidth
+\cellsize=1.5ex
+\bgroup
+
+{\catcode`\|=\active \catcode`\_=\active \catcode`\ =\active%
+\catcode`\&=\active\catcode`\^^M=\active%
+\gdef\linedefs{\let|\vertline\let_\horline\let \nolines\let&\phantomvertline
+\let^^M\nextrow}}
+
+\gdef\lines#1{\count@\z@\dimen0=\cellsize\advance\dimen0 .4pt
+  \def\vertline{\count@\@ne\leavevmode\rlap{\vrule height \cellsize}}
+  \def\phantomvertline{\count@\@ne\leavevmode\rlap{\phantom{\vrule height \cellsize}}}
+  \def\horline{\count@\z@\leavevmode
+    \hbox to\cellsize{\vrule height.4pt width\dimen0\hss}}
+  \def\nolines{\relax\ifodd\count@\leavevmode\kern\cellsize\count@\z@
+    \else\count@\@ne\fi\relax}
+  \def\nextrow{\par\count@\z@}
+  \lwidth\cellsize
+  \multiply\lwidth by #1
+  \catcode`\|=\active \catcode`\_=\active \catcode`\&=\active
+  \catcode`\^^M=\active \catcode`\ =\active
+  \hsize\lwidth\advance\hsize.4pt\parindent\z@\offinterlineskip\linedefs}
+  \egroup
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  447.}{ Осенняя письменная учебная олимпиада.
+}{28 октября 2017 5 класс}
+
+
+
+\begin{task}
+Сложите из следущих фигур квадрат: \lower.4\cellsize\cells{
+     _ 
+ _  |_|
+|_|_|_| 
+|_|_|_| }.
+\end{task}
+
+\begin{task}
+На столе лежат 15 карточек (см. рисунок). Можно ли убрать двенадцать из них так, чтобы сумма оставшихся была равна 50?
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+11 & 23 & 15 & 5& 23\\
+\hline
+21 &15 & 7 & 35& 9\\
+\hline
+15 & 13 & 1 & 17& 3\\
+\hline
+\end{tabular}
+\end{task}
+
+
+
+\begin{task}
+Можно ли так расставить числа от 1 до 16 в квадрате $4\times4$ так, чтобы  каждое число было либо меньше всех соседних по стороне либо больше?
+\end{task}
+
+\begin{wrapfigure}{r}{0.0cm}%this figure will be at the right
+    \centering
+   \includegraphics[scale=0.37]{min3.jpg}
+\end{wrapfigure}
+\begin{task}
+Трем пятиклассницам выдали 7 карточек, на которых были написаны числа от 1 до 7. Саша взяла себе три карточки, Маргарита и Аделина – по две. Аделина практически сразу потеряла свои карточки. Но Саша сказала Аделине: «Я точно знаю, что сумма чисел на твоих карточках четна», и оказалась абсолютно права. Какие числа были написаны на карточках у Саши?
+\end{task}
+
+
+\begin{task}
+Докажите, что из \sub 2017;\sub 2018 полосок бумаги шириной 1 и длинами 1, 2, \ldots, 2017 (2018) можно составить прямоугольник, длина и ширина которого больше 1. Какова будет его площадь?
+\end{task}
+
+
+
+
+
+\begin{task}
+Докажите, что квадрат $10 \times 10$ нельзя разрезать на фигуры вида:
+\lower.4\cellsize\cells{ 
+   _
+ _|_|_ 
+|_|_|_| }.
+\end{task}
+
+
+\begin{task}
+Можно ли пронумеровать ребра куба числами от 1 до 12 так, чтобы для каждой
+вершины куба сумма номеров ребер, которые в ней сходятся, была одинаковой?
+\end{task}
+
+\begin{task}
+Квадрат разбит прямыми на 25 одинаковых квадратиков – клеток. В некоторых клетках нарисована одна из диагоналей так, что никакие две нарисованные диагонали не имеют общей точки (даже общего конца). Каково наибольшее возможное число нарисованных диагоналей?
+\end{task}
+
+\vspace*{\fill}
+{\bf Олимпиада письменная, срок сдачи 11 ноября. 
+ Просьба все решения оформлять в отдельной тоненькой тетрадке  более или менее аккуратно,  пояcнять все переходы максимально подробно. Уважаемые родители, огромная просьба,  это олимпиада для детей, пусть они сами решают и, что у них получится, то получится, а что нет, то значит не судьба. Пусть борьба будет честной.}
+
+\centerline {\bf 4 ноября занятия не будет}
+\centerline{ Сайт кружка  \url{http://matemax.pythonanywhere.com},}
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
+
+\begin{task}
+Можно ли расставить на шахматной доске 17 королей так, чтобы они не били друг друга?\end{task}
+
+\begin{task}
+Семь шестиклассников решили вместе 100 задач, причем каждый решил разное
+количество задач. Докажите, что какие-то три школьника решили вместе не менее
+50 задач.
+\end{task}
+\begin{task}
+На клетчатой плоскости отмечено 100 клеток. Докажите, что можно отметить среди
+них 25 клеток так, чтобы они не имели общих точек.
+\end{task}
+\begin{task}
+В каждой клетке квадрата $9 \times 9$ стоит конь. По команде каждый конь делает один
+ход. Докажите, что по крайней мере одна клетка после этого окажется свободной.
+\end{task}
+\begin{task}
+Найдите суммму всех чётных чисел от 2 до 146.
+\end{task}
+
+
+
+\begin{task}
+Трое пятиклассников играют в «Мега-банальности». Каждый записывает по сто слов. После этого записи сравнивают. Если слово встретилось у всех троих, за него дают 0 очков, если у двоих – каждый получает 1 очко, если у одного – он получает 4 очка. Может ли в результате один набрать 161, другой – 180, а третий – 286 очков?
+\end{task}
+

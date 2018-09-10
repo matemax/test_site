@@ -1,0 +1,73 @@
+%%
+%% This is file `cells.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% cells.dtx  (with options: `sty')
+%% 
+%% From file: cells.dtx, 24 Nov 2002
+\csname cells.loaded\endcsname
+\expandafter\let\csname cells.loaded\endcsname\endinput
+\chardef\SavedAtCode=\catcode`\@
+\catcode`\@=11
+\newdimen\cellsize \cellsize=6pt
+\newdimen\cellthickness \cellthickness=.4pt
+\newif\if@cellv
+\newif\if@cellhmode
+\newif\if@cellempty
+\def\cells{\vbox\bgroup\cell@start\cell@arg}
+\def\cell@arg#1{#1\egroup}
+\def\lines#1{\cell@start}
+\def\cell@start{\cell@catcodes\cell@defs
+  \offinterlineskip\parindent\z@
+  \global\@cellhmodefalse\@cellemptytrue}
+\def\cell@catcodes{\catcode`\|=\active\catcode`\_=\active\catcode`\ =\active
+  \catcode`\#=\active \catcode`\:=\active \catcode`\.=\active
+  \catcode`\^^M=\active}
+{\cell@catcodes%
+\gdef\cell@defs{%
+\let|\cell@vert\let_\cell@hor\let \cell@space\def^^M{\cell@par}%
+\let#\cell@black\let:\cell@vdots\let.\cell@hdots}}
+\def\cell@hmode{\if@cellhmode\else\expandafter\cell@hmode@\fi}
+\def\cell@hmode@{\hbox\bgroup\@cellvtrue\global\@cellhmodetrue
+  \if@cellempty\else\vrule width\z@ height\cellsize\fi
+  \aftergroup\cell@checkmode
+  \hskip\cellthickness}
+\def\cell@checkmode{\if@cellhmode\egroup\fi}
+\def\cell@par{\if@cellempty\if@cellhmode\cell@par@a\fi\else\cell@par@b\fi}
+\def\cell@par@a{\global\@cellhmodefalse\egroup\@cellemptyfalse}
+\def\cell@par@b{\cell@hmode\global\@cellhmodefalse\egroup}
+\def\cell@vert{\cell@hmode
+  \llap{\vrule width\cellthickness height\cellsize}\@cellvfalse}
+\def\cell@hor{\cell@hmode\hbox to\cellsize{\hskip-\cellthickness
+    \dimen@\cellsize\advance\dimen@\cellthickness
+    \vrule height\cellthickness width\dimen@}\@cellvtrue}
+\def\cell@black{\cell@hmode \hbox to\cellsize{\hskip-\cellthickness
+   \dimen@\cellsize\advance\dimen@\cellthickness
+   \vrule height\cellsize width\dimen@\hss}\@cellvtrue}
+\def\cell@space{\cell@hmode
+   \if@cellv\@cellvfalse\else\hskip\cellsize\@cellvtrue\fi}
+\def\cell@vdots{\cell@hmode\llap{\vbox to\cellsize{\vskip-.5\cellthickness
+    \vfil\hrule height.1\cellsize width\cellthickness\vfil
+    \vfil\hrule height.1\cellsize width\cellthickness\vfil
+    \vfil\hrule height.1\cellsize width\cellthickness\vfil
+    \vskip.5\cellthickness
+  }}\@cellvfalse}
+\def\cell@hdots{\cell@hmode\hbox to\cellsize{\hskip-.5\cellthickness
+    \hfil\vrule width.1\cellsize height\cellthickness\hfil
+    \hfil\vrule width.1\cellsize height\cellthickness\hfil
+    \hfil\vrule width.1\cellsize height\cellthickness\hfil
+    \hskip.5\cellthickness
+  }\@cellvtrue}
+\def\cput(#1,#2)#3{%
+  \vbox to\z@{\vskip.5\cellthickness\vskip#1\cellsize\vskip-.5\cellsize
+    \hbox to\z@{\hskip.5\cellthickness\hskip#2\cellsize\hskip-.5\cellsize
+      \vbox to\z@{\vss\hbox to\z@{\hss#3\hss}\vss}%
+    \hss}%
+  \vss}%
+  \nointerlineskip}
+\catcode`\@=\SavedAtCode
+\endinput
+%%
+%% End of file `cells.sty'.
