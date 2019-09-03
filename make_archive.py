@@ -32,7 +32,7 @@ def make_archive2(years):
             f = files[row + i * countRows]
             res += "\n<td>\n"
             res  += '<a href="/archive/' + years + '/' + f + '">'
-            res += f[3:-4] + '</a>' + '(<a href="/archive/' + years + '/' + getTex(
+            res += f[:-4] + '</a>' + '(<a href="/archive/' + years + '/' + getTex(
                 f) + '">' + 'tex' + '</a>)' + '\n'
             res+= "\n</td>\n"
         res += "\n</tr>"
@@ -47,4 +47,4 @@ def make_archive2(years):
         f.write(res)
 
 
-make_archive2("2017-2018")
+make_archive2("2018-2019")

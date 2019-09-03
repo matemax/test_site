@@ -1,0 +1,72 @@
+\documentclass[14pt,DIV14]{scrartcl}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{sheet}
+\usepackage{multicol}
+ \usepackage{epigraph}
+  \usepackage{graphicx}
+%\usepackage{xfrac}
+\usepackage{a4wide}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx,epstopdf}
+\def\mod_#1 {\mathrel{\mathop{\equiv}\limits_{#1}}}
+\newtheorem{theorem}{Теорема}
+\usepackage{wrapfig}
+\evensidemargin=-1cm \oddsidemargin=-1cm \textwidth=18cm
+\topmargin=-2cm \textheight=26cm
+
+\begin{document}
+\sheet{Малый механико-математический факультет,  П1.}{ Алгоритм Евклида
+}{16 марта 2019 6 класс}
+
+
+\begin{task}
+Коля берёт прямоугольный бумажный лист $m\times n$ см, отрезает от него квадрат со стороной, равной меньшей стороне прямоугольника, и кидает его на пол. От оставшегося прямоугольника он снова отрезает квадрат, кидает на пол и так далее, до тех пор, пока это возможно. Что же останется в руках у Коли, когда он закончит свою деятельность и приступит к уборке мусора?
+\end{task}
+
+\begin{task}
+Пусть $a$ при делении на $b$ дает остаток $r$. Докажите, что $(a,b)=(b,r)$.
+\end{task}
+
+
+\begin{task}
+Алгоритм Евклида: для того, чтобы найти НОД двух чисел $a$ и $b$, нужно выполнить последовательно несколько делений с остатком:\\
+$a   = b q_1+r_1$\\
+$b   = r_1q_2+r_2$\\
+$r_1  = r_2q_3+r_3$\\
+$r_2  = r_3q_4+r_4$\\
+\ldots\\
+$r_{n-2}= r_{n-1}q_n+r_n$\\
+$r_{n-1}= r_n q_{n+1}$\\
+На каждом шаге предыдущий делитель делится с остатком на предыдущий остаток. Так продолжается до тех пор, пока на каком-то шаге остаток не станет равен 0. Последний ненулевой остаток $r_n$  равен $(a,b)$.
+\end{task}
+
+
+\begin{task}
+Какие значения может принимать наибольший общий делитель чисел $3n+1$ и $7n-4$  в зависимости от $n$?
+\end{task}
+
+\begin{task}
+Найдите наибольший общий делитель всех десятизначных чисел, состоящих из различных цифр.
+\end{task}
+
+\begin{task}
+Найдите наибольшее натуральное число , такое, что числа 78, 559, 1151 при делении на  дают одинаковые остатки.\end{task}
+
+\vspace*{\fill}
+Сайт кружка  \url{http://matemax.pythonanywhere.com} 
+
+
+\end{document}
+\begin{definition}
+\end{definition}
+\begin{task}
+\end{task}
+\begin{axiom}
+\end{axiom}
+\begin{assertion}
+\end{assertion}
+\begin{exercise}
+\end{exercise}
